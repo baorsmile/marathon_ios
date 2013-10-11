@@ -1,18 +1,17 @@
 //
 //  Const.h
-//  Shake
+//  marathon
 //
-//  Created by zhangluyi on 11-5-14.
-//  Copyright 2011年 Lehe. All rights reserved.
-// 
-//当前版本的version_code
-//#define BUILD_FOR_VOICE_VERSION				YES
+//  Created by Ryan on 13-10-11.
+//  Copyright (c) 2013年 Ryan. All rights reserved.
+//
+
 
 ////*******************************************
 ////*******************************************
 ////调试开关 //For test Only    Release版本一定要关闭本开关，切记切记！！！！！！！！！！！！！！      
 //#define DEBUG_LEHE
-//#define DEBUG_LOG
+#define DEBUG_LOG
 ////*******************************************//
 ////*******************************************//
 
@@ -40,43 +39,26 @@
 #define kServerVersion  @"1.1"
 #define kBuildForSDK    @"0"           //0 for APP , 1 for SDK
 
-//渠道号 不上91一定要注释掉
-#define kPid								@"" //@"60101"
 
-//apple id
-#ifdef BUILD_FOR_VOICE_VERSION
-#define kAppIdDefault                       @"708978158"
-#else
-//#define kAppIdDefault                       @"481951471"      //For Acamar 91    wwqlehe@126.com  //com.laiyaoyao.eat
-#define kAppIdDefault                       @"708978158"        //For Lehe         mycode@126.com   //com.lehe.wanyou
-#endif
+#define kAppID                       @""
+
 
 //打开本应用的scheme
-#define APPLICATION_SCHEME      @"lehewanyou://"
-
-#define kAppId \
-[(ExpertAppDelegate *)[[UIApplication sharedApplication] delegate] gAppleID]
+#define APPLICATION_SCHEME      @"marathon://"
 
 //api url
 #ifdef DEBUG_LEHE
-    #define apiHost     @"http://wanyou.lehe.com/api2/api_call.php?"   //For test Only
-    #define wapHost     @"http://api.lehe.com/index.php?"           //For test Only
+    #define apiHost             @"http://127.0.0.1:8080/marathon/api_call.php?"   //For test Only
 #else
-    #define apiHost                             @"http://wanyou.lehe.com/api2/api_call.php?"
-    #define wapHost                             @"http://api.lehe.com/index.php?"
+    #define apiHost             @"http://wanyou.lehe.com/api2/api_call.php?"
 #endif
-
-// 释放内存
-#define RELEASE_SAFELY(__POINTER) { [__POINTER release]; __POINTER = nil; }
 
 //本地cookies nsdictionary
 #define kLocalCookieData                    @"kLocalCookieData"
 
 #define WeiXinAppID                         @"wx5ba77a2d9cc07927"
-//#define WeiXinAppKey                        @"8b62d0bc1546c258754a890ea010ef91"
 
 #define QQAppID                             @"QQ68BD9A19"
-//#define QQAppID                             @"QQ33C20900"
 
 //腾讯接入
 #define TENCENT_APP_ID                      @"100506628"
@@ -96,8 +78,8 @@
 #define SYSTEM_VERSION_GREATER_THAN(v)      ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
 
 #define kNetworkErrorMessage                @"网络不给力，请稍候重试"
-#define kErrorIcon              @"ico_error_info_2.png"
-#define kSuccessIcon            @"ico_sucess.png"
+#define kErrorIcon                          @"ico_error_info_2.png"
+#define kSuccessIcon                        @"ico_sucess.png"
 
 //获取谷歌地图
 #define kRequestGoogleMapPathInfo			1999
@@ -122,51 +104,9 @@
 #define kScreenHeight                       SCREEN_HEIGHT
 #define kLeftInterval                       10
 
-//页面切换
-#define Game_Center_Notification                   @"game_center_notification"
-#define Guild_Organization_Notification          @"guild_organization_notification"
-#define My_Friends_Notification                @"my_friends_notification"
-#define Game_Cheats_Notification          @"game_cheats_notification"
-#define Gift_Package_Notification          @"gift_package_notification"
-#define Setting_Page_Notification          @"setting_page_notification"
-#define Refresh_Profile_Info_Notification          @"refresh_profile_info_notification"
-#define Receive_Game_Info_Notification          @"receive_game_info_notification"
-#define kProcessRemoteNotifaction			@"ProcessRemoteNotifaction"    //处理服务器推送消息
-#define Refresh_Selection_Bg_Notification          @"refresh_selection_bg_notification"
-
-#define App_Expert_Move_To_Right               @"app_expert_move_to_right"
-#define App_Expert_Select_Without_Refresh      @"app_expert_select_without_refresh"
-
-
-#define EMOJI_UNICODE_TO_UTF8(x) ((((0x808080F0 | (x & 0x3F000) >> 4) | (x & 0xFC0) << 10) | (x & 0x1C0000) << 18) | (x & 0x3F) << 24);
-#define EMOJI_UNICODE_TO_UTF16(x) (((((x - 0x10000) >>10) | 0xD800) << 16) | (((x-0x10000)&0x3FF) | 0xDC00))
-#define EMOJI_MULITTHREEBYTE_UTF16_TO_UNICODE(x,y) (((((x ^ 0xD800) << 2) | ((y ^ 0xDC00) >> 8)) << 8) | ((y ^ 0xDC00) & 0xFF)) + 0x10000
-
-//表情键盘
-#define kFaceBoardArrayForShow \
-[(ExpertAppDelegate *)[[UIApplication sharedApplication] delegate] gFaceBoardArrayForShow]
-
-//view的加载方式
-typedef enum _ShowViewType {
-    ShowViewPresentModalView = 1,
-    ShowViewPushView = 2,
-    ShowViewAddSubView = 3,
-    ShowViewRevealSlideView = 4
-}EnumShowViewType;
-
-
-//语音转换
-#define FILEPATH [DOCUMENTS_FOLDER stringByAppendingPathComponent:@"appEncode1.ilbc"]
-#define PLAYFILEPATH [DOCUMENTS_FOLDER stringByAppendingPathComponent:@"appEncode1_play.ilbc"]
-#define OUTPUT_PATH [DOCUMENTS_FOLDER stringByAppendingPathComponent:@"appEncode_sta.ilbc"]
-#define APPLE_OUTPUT_PATH [DOCUMENTS_FOLDER stringByAppendingPathComponent:@"appEncode_final.ilbc"]
-
-#define HEADER_FILEPATH [[NSBundle mainBundle] pathForResource:@"appleilbcHeader" ofType:@"head"]
-#define STANDARD_ILBC   [DOCUMENTS_FOLDER stringByAppendingPathComponent:@"standard.ilbc"]
-#define APPLE_ILBC      [DOCUMENTS_FOLDER stringByAppendingPathComponent:@"apple.ilbc"]
-
-#define DOCUMENTS_FOLDER [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
 // downfile manager
+#define DOCUMENTS_FOLDER [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
+
 #define MOST_FILE_CAPACITY 300
 #define FILE_CLEAN_THRESHOLD 50
 #define DOWNLOAD_FOLDER [DOCUMENTS_FOLDER stringByAppendingPathComponent:@"appexpert_download"]
@@ -177,17 +117,6 @@ typedef enum _ShowViewType {
 
 #define DOCUMENTS_FOLDER [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
 
-#define FILEPATH [DOCUMENTS_FOLDER stringByAppendingPathComponent:@"appEncode1.ilbc"]
-#define OUTPUT_PATH [DOCUMENTS_FOLDER stringByAppendingPathComponent:@"appEncode_sta.ilbc"]
-#define APPLE_OUTPUT_PATH [DOCUMENTS_FOLDER stringByAppendingPathComponent:@"appEncode_final.ilbc"]
-
-#define HEADER_FILEPATH [[NSBundle mainBundle] pathForResource:@"appleilbcHeader" ofType:@"head"]
-#define STANDARD_ILBC   [DOCUMENTS_FOLDER stringByAppendingPathComponent:@"standard.ilbc"]
-#define APPLE_ILBC      [DOCUMENTS_FOLDER stringByAppendingPathComponent:@"apple.ilbc"]
-//好友聊天记录存储
-#define FRIENDSCHAT_FILEPATH  [DOCUMENTS_FOLDER stringByAppendingPathComponent:@"wanyou_friends_chat"]
-//待发送聊天消息存储
-#define ToSendMessage_FILEPATH  [DOCUMENTS_FOLDER stringByAppendingPathComponent:@"wanyou_to_send_message"]
 
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
 
@@ -197,106 +126,21 @@ typedef enum _ShowViewType {
 //#define kClientVersion                      @"2.0"
 #define kVia                                @"iphone"
 #define kUUid \
-[(ExpertAppDelegate *)[[UIApplication sharedApplication] delegate] gUuid]
+[(AppDelegate *)[[UIApplication sharedApplication] delegate] gUuid]
 
 #define kUDID \
-[(ExpertAppDelegate *)[[UIApplication sharedApplication] delegate] gUdid]
+[(AppDelegate *)[[UIApplication sharedApplication] delegate] gUdid]
 
 #define kToken \
-[(ExpertAppDelegate *)[[UIApplication sharedApplication] delegate] gToken]
+[(AppDelegate *)[[UIApplication sharedApplication] delegate] gToken]
 
 #define kAccountID \
-[(ExpertAppDelegate *)[[UIApplication sharedApplication] delegate] gMyAccountID]
+[(AppDelegate *)[[UIApplication sharedApplication] delegate] gMyAccountID]
 
-#define kAppDelegate ((ExpertAppDelegate *)[[UIApplication sharedApplication] delegate])
-
-//
-#define kCurrentCity \
-[(ExpertAppDelegate *)[[UIApplication sharedApplication] delegate] gCurrentCity]
-
-//
-#define kCurrentCityPinYin \
-[(ExpertAppDelegate *)[[UIApplication sharedApplication] delegate] gCurrentCityPinYin]
-
-//
-#define kCurrentDistrict \
-[(ExpertAppDelegate *)[[UIApplication sharedApplication] delegate] gCurrentDistrict]
-
-//用户行为日志队列
-#define kUserBehavior \
-[(ExpertAppDelegate *)[[UIApplication sharedApplication] delegate] gUserBehavior]
-
-//gSendPhotoService
-#define kSendPhotoService \
-[(ExpertAppDelegate *)[[UIApplication sharedApplication] delegate] gSendPhotoService]
-
-//gPhotoNotifactionDict
-#define kPhotoNotifactionDict \
-[(ExpertAppDelegate *)[[UIApplication sharedApplication] delegate] gPhotoNotifactionDict]
-
-//gRequestResendService
-#define kRequestResendService \
-[(ExpertAppDelegate *)[[UIApplication sharedApplication] delegate] gRequestResendService]
-
-//gTencentOAuth
-#define kTencentOAuth \
-[(ExpertAppDelegate *)[[UIApplication sharedApplication] delegate] gTencentOAuth]
-
-//sinaweibo
-#define kWeiboEngine \
-[(ExpertAppDelegate *)[[UIApplication sharedApplication] delegate] sinaweibo]
-
-//For XMPP
-#define kXmppMyJID \
-[(ExpertAppDelegate *)[[UIApplication sharedApplication] delegate] gXmppMyJID]
-#define kXmppPassowrd \
-[(ExpertAppDelegate *)[[UIApplication sharedApplication] delegate] gXmppPassowrd]
-#define kXmppServer \
-[(ExpertAppDelegate *)[[UIApplication sharedApplication] delegate] gXmppHostName]
-#define kXmppStream \
-[(ExpertAppDelegate *)[[UIApplication sharedApplication] delegate] gXmppStream]
-
-//检查客户端是否有新版本
-#ifdef BUILD_FOR_VOICE_VERSION
-#define kVersionCheck  [NSString stringWithFormat:@"%@&via=iphone&m=release_info&appname=voice", kBaseURL]
-#else
-#define kVersionCheck  [NSString stringWithFormat:@"%@&via=iphone&m=release_info&appname=yy", kBaseURL]
-#endif
-#define kClientVersion [[[NSBundle mainBundle] infoDictionary] objForKey:@"CFBundleVersion"]
-#define kProfileVersion [NSString stringWithFormat:@"profile%@",[[[NSBundle mainBundle] infoDictionary] objForKey:@"CFBundleVersion"]]
-
-//检查更新
-#define RELEASE_INFO \
-[NSString stringWithFormat:@"%@&m=release_info", kBaseURL]
+#define kAppDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
 //全局参数宏定义
-//设置参数
-#define kSettingResultsHelper \
-[kAppDelegate settingResultHelper]
-
-//历史数据类
-#define kHistoryStoreHelper \
-[kAppDelegate historyStoreHelper]
-
-#define kAddressBookHelper \
-[kAppDelegate addressBookHelper]
-
-//事务号
-#define kTransactionHelper \
-[kAppDelegate transactionNumberHelper]
-
 #define KRANDOM(x) (rand()%x)
-
-#define HEI_10 [UIFont boldSystemFontOfSize:10]
-#define HEI_11 [UIFont boldSystemFontOfSize:11]
-#define HEI_12 [UIFont boldSystemFontOfSize:12]
-#define HEI_13 [UIFont boldSystemFontOfSize:13]
-#define HEI_14 [UIFont boldSystemFontOfSize:14]
-#define HEI_16 [UIFont boldSystemFontOfSize:16]
-#define HEI_17 [UIFont boldSystemFontOfSize:17]
-#define HEI_18 [UIFont boldSystemFontOfSize:18]
-#define HEI_20 [UIFont boldSystemFontOfSize:20]
-#define HEI_22 [UIFont boldSystemFontOfSize:22]
 
 #define HEI_(xx) [UIFont boldSystemFontOfSize:xx]
 
@@ -316,51 +160,6 @@ typedef enum _ShowViewType {
 //副标题的浅灰字体色值
 #define BASE_LIGHTGREY_TEXT_COLOR  RGBCOLOR(136, 136, 136)
 
-
-//页面顶部Bar
-#define TOPBAR_BACKGROUND_COLOR     RGBACOLOR(238, 238, 238, 1.0)
-#define kTopBarHeight               45
-#define TOPBAR_HEIGHT               50
-#define TOPBAR_MARGIN_TOP           5
-#define TOPBAR_MARGIN_LEFT          5
-#define TOPBAR_BUTTON_WIDTH         40
-#define TOPBAR_BUTTON_HEIGHT        40
-//输入控件
-#define kInputViewHeight 50
-#define kDefaultKeyboardHeight 216
-
-//推送消息类型
-#define	kNotificateOpenURL          @"2"
-#define	kNotificateOpenGameForum    @"3"
-#define	kNotificateOpenScheme       @"4"
-#define	kNotificateDownloadOtherApp @"5"
-#define	kNotificateOpenGiftsCenter  @"6"
-#define	kNotificateOpenGameGifts    @"7"
-#define	kNotificateOpenGiftDetail   @"8"
-#define	kNotificateOpenForumDetail  @"9"
-
-#define	kNotificateOpenGameTalk     @"10"
-#define	kNotificateOpenGameCenter   @"11"
-#define	kNotificateOpenGuildTalk    @"12"
-#define	kNotificateOpenGuildCenter  @"13"
-#define	kNotificateOpenFriendTalk   @"14"
-#define	kNotificateOpenFriendCenter @"15"   //多条私聊消息
-
-#define	kNotificateNewVersion       @"16"   //版本更新
-#define	kNotificateFriendRequest    @"17"   //申请好友请求
-#define	kNotificateFriendWeiBo      @"18"   //微博上有好友加入
-#define	kNotificateGameRaider       @"19"   //游戏攻略，新攻略的推送
-#define	kNotificateRankList         @"20"   //风云榜
-#define	kNotificateRankListDetail   @"21"   //风云榜详情
-
-
-#define kRoomJoinAlertMsgType       @"999999" //群聊xmpp登录成功提示消息类型
-
-typedef enum kREPLY_TYPE {
-    REPLY_TYPE_WEIBO = 999,
-    REPLY_TYPE_QQ
-} REPLY_TYPE;
-
 typedef struct
 {
 	double lat;
@@ -374,76 +173,6 @@ typedef enum kUPLOAD_TYPE {
 	kUploadTypeRecord
 } UPLOAD_TYPE;
 
-typedef enum kTALK_TYPE {
-    kGameTalk,
-    kGroupTalk
-} TALK_TYPE;
-
-typedef enum kTalkingVC_Position {
-    kTalkVCLeftPosition,
-    kTalkVCCenterPosition
-}TalkingVC_Position;
-
-typedef enum kSHARE_TYPE {
-    kShareTypeWeibo = 1,
-	kShareTypeWeixin,
-	kShareTypeQQ
-} SHARE_TYPE;
-
-//个人名片默认背景图片名称
-#define kDefaultPersonCardBgImageFirst      @"userbg_1.jpg"
-#define kDefaultPersonCardBgImageSecond     @"userbg_2.jpg"
-
-#define kUserPlayGameExeNameList            @"kUserPlayGameExeNameList"
-
-#define kEventGameViewShouldScrollUP        @"kEventGameViewShouldScrollUP"
-#define kEventGameViewShouldScrollDown      @"kEventGameViewShouldScrollDown"
-#define kEventGameViewShouldFullScreen      @"kEventGameViewShouldFullScreen"
-
-#define kEventAllResignFirstResponder       @"kEventAllResignFirstResponder"
-
-//新聊天消息
-#define kEventHaveNewMessage				@"kEventHaveNewMessage"
-#define kEventShowMessageTip                @"kEventShowMessageTip"
-//聊天消息准备发送
-#define kEventMessageWillSend				@"kEventMessageWillSend"
-//聊天消息发送成功
-#define kEventMessageSendDone				@"kEventMessageSendDone"
-//新XMPP用户，还没有比配到AccountID等信息，需要向服务器请求好友列表
-#define kEventHaveNewXMPPUser				@"kEventHaveNewXMPPUser"
-//聊天图片文件发送成功
-#define kEventImageFileSendDone				@"kEventImageFileSendDone"
-//聊天图片文件已发送字节数
-#define kEventObjectDataSendBytes           @"kEventObjectDataSendBytes"
-//聊天语音文件发送成功
-#define kEventRecordFileSendDone            @"kEventRecordFileSendDone"
-//刷新聊天记录通知
-#define kEventMsgLogReload                  @"kEventMsgLogReload"
-
-//回到激活状态
-#define kEventWeAreComeBack                 @"kEventWeAreComeBack"
-//登录界面关闭通知
-#define kEventLoginViewClosedDone           @"kEventLoginViewClosedDone"
-//更新个人名片通知
-#define kEventRefreshPersonCard             @"kEventRefreshPersonCard"
-//登录成功通知
-#define kEventLoginSucceed                  @"kEventLoginSucceed"
-//推出登录／注销通知
-#define kEventLogoutDone                    @"kEventLogoutDone"
-//Token无效的通知
-#define kEventTokenInvalid                  @"kEventTokenInvalid"
-//停止语音播放
-#define kEventStopGAvAudioPlayer            @"kEventStopGAvAudioPlayer"
-
-
-//Xmpp
-#define XmppJIDKey                              @"XmppJIDKey"
-#define XmppPasswordKey                         @"XmppPasswordKey"
-#define XmppServerKey                           @"XmppServerKey"
-#define WanyouRoomXmppUserConfigKey             @"WanyouRoomXmppUserConfigKey"
-#define WanyouPrivateXmppUserConfigKey          @"WanyouPrivateXmppUserConfigKey"
-#define FriendsArrayKey                         @"FriendsArrayKey"
-
 //Notification
 #define kUpdateFriendFinished                   @"UpdateFriendFinished"
 #define kUpdateFriendFail                       @"UpdateFriendFail"
@@ -451,95 +180,8 @@ typedef enum kSHARE_TYPE {
 #define kFriendCenterRefreshNotification        @"FriendCenterRefreshNotification"
 
 //PersistenceHelper
-#define RoomTextColorKey                        @"RoomTextColorKey"
-#define SearchHistoryDataKey                    @"SearchHistoryDataKey"
-//#define PlayingGamesDataKey                     @"PlayingGamesDataKey"
-#define UserAddGamesDataKey                     @"UserAddGamesDataKey"
-#define HotGamesDataKey                         @"HotGamesDataKey"
-#define InstalledAppsKey                        @"InstalledAppsKey" //从服务器获取的游戏信息数组
-#define InstalledExEsKey                        @"InstalledExEsKey" //从本机后台发现的应用信息，包括游戏
-#define MyGuildsDataKey                         @"MyGuildsDataKey"
-#define MyFriendsDataKey                        @"MyFriendsDataKey"
-#define LastPersonCardBgImgUrlDataKey           @"LastPersonCardBgImgUrlDataKey"
+#define INVITECODE                             @"invite_code"
 
-#define KEY_MY_PHONE                            @"myPhone"
-
-//用于异步请求返回时判断
-#define kRequestDeviceToken                 9999
-#define kRequestResendRequest               1000
-#define kRequestGetXMPPConfig               1001
-#define kRequestGetXMPPRoom                 1002
-#define kRequestAnsySendPhoto               1003
-#define kRequestChangeXMPPNick              1004
-#define kRequestForumRefresh                1005
-#define kRequestForumAppend                 1006
-#define kRequestMineForumRefresh            1007
-#define kRequestMineForumAppend             1008
-#define kRequestForumSend                   1009
-#define kRequestForumDetailRefresh          1010
-#define kRequestForumDetailAppend           1011
-#define kRequestForumDetailSend             1012
-#define kRequestForRaiderFavorite           1013
-#define kRequestForCamesList                1014
-#define kRequestGameFastSearch              1015
-#define kRequestGameSearch                  1016
-#define kRequestGameSearchAppend            1017
-#define kRequestGameUserAdd                 1018
-#define kRequestGameHot                     1019
-#define kRequestGameHotAppend               1020
-#define kRequestGameRecommend               1021
-#define kRequestGameSupport                 1022
-#define kRequestGamePushSet                 1023
-#define kRequestGameMembers                 1024
-#define kRequestGameMembersAppend           1025
-#define kRequestGameCard                    1026
-#define kRequestGameUserDelete              1027
-#define kRequestRegister                    1028
-#define kRequestGameInnerGift               1029
-#define kRequestGamePlayAndHotGift          1030
-#define kRequestGameChangeMyProfile         1031
-#define kRequestGameGetMyProfile            1032
-#define kRequestGameGetGameBillboard        1033
-#define kRequestPushMsgRemind               1034
-#define kRequestCommitFeedback              1035
-#define kRequestGameInnerGroup              1036
-#define kRequestGameCheckUpdate             1037
-#define kRequestGameInnerGroupMore          1038
-#define kRequestGameBillboardAppend         1039
-#define kRequestGameCheckUpdateAuto         1040
-#define kRequestTalkingStatus               1041
-#define kRequestCommonTypes                 1042
-
-#define kRequestInviteFriend				1207
-#define kRequestFriendInShake				1209
-#define kUploadAddressBook					1210
-#define kRequestMyPhone						1211
-#define kRequestAuthorize                   1252
-#define kRequestWeiboFriendsList            1254
-#define kRequestQQFriendsList               1255
-
-#define kRequestGameList                    1300
-#define kRequestSearchGame                  1301
-#define kRequestCreateGroup                 1302
-#define kRequestGetJoinGroupList            1303
-#define kRequestSearchGroup                 1304
-#define kRequestMyFriends                   1305
-#define kRequestNewWeiboFriends             1306
-#define kRequestBeMyFriends                 1307
-#define kRequestAddFriendWithWanyouId       1308
-#define kRequestDelFriendWithWanyouId       1309
-#define kRequestAddWeiboFriend              1310
-#define kRequestUserProfile                 1311
-#define kRequestGroupProfile                1312
-#define kRequestJoinGroup                   1313
-#define kRequestQuitGroup                   1314
-#define kRequestDelGroup                    1315
-#define kRequestChangeChatPush              1316
-#define kRequestUserGameList                1317
-#define kRequestUserGroupList               1318
-#define kRequestInviteFriend2Group          1319
-#define kRequestInviteFriendList            1320
-#define kRequestInviteFriend2OneGroup       1321
 
 //基础URL
 #define kBaseURL \
@@ -805,46 +447,3 @@ typedef enum kSHARE_TYPE {
 //动态参数
 #define COMMON_TYPES_MAKE \
 [NSString stringWithFormat:@"%@&m=common_types",kBaseURL]
-
-//#####################################################################################################################
-//消息推送未读数量 Begin.vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-//消息推送未读数量 第一级
-#define UNREAD_MAIN_MY_GAMES        @"UNREAD_MAIN_MY_GAMES"         //1 index:0 //游戏
-#define UNREAD_MAIN_MY_GUILDS       @"UNREAD_MAIN_MY_GUILDS"        //2 index:1 //游戏群
-#define UNREAD_MAIN_MY_FRIENDS      @"UNREAD_MAIN_MY_FRIENDS"       //3 index:2 //好友
-#define UNREAD_MAIN_GAME_RAIDERS    @"UNREAD_MAIN_GAME_RAIDERS"     //4 index:3 //攻略
-#define UNREAD_MAIN_GIFT_PACKAGE    @"UNREAD_MAIN_GIFT_PACKAGE"     //5 index:4 //礼包
-#define UNREAD_MAIN_SETTING_PAGE    @"UNREAD_MAIN_SETTING_PAGE"     //6 index:5 //设置
-
-//消息推送未读数量 第二级 游戏：\
-1、使用 UNREAD_SUB_GAME_TALKROOM_游戏AppID     作为各个游戏 聊天室  未读消息数量的Key \
-2、使用 UNREAD_SUB_GAME_GUILDS_游戏AppID       作为各个游戏 游戏群   未读消息数量的Key游戏群 \
-3、使用 UNREAD_SUB_GAME_FORUM_游戏AppID        作为各个游戏 论坛   未读消息数量的Key游戏群 \
-4、使用 UNREAD_SUB_GAME_BILLBOARD_游戏AppID    作为各个游戏 风云榜 未读消息数量的Key游戏群 \
-5、使用 UNREAD_SUB_GAME_GIFTPACKAGE_游戏AppID  作为各个游戏 礼包   未读消息数量的Key游戏群
-
-//消息推送未读数量 第二级 游戏群：  1、使用 UNREAD_SUB_GUILD_游戏群ID 作为各个游戏群未读消息数量的Key
-#define UNREAD_SUB_GUILD_SUMMARY    @"UNREAD_SUB_GUILD_SUMMARY" //多个游戏群的汇总消息提示，游戏群GuildViewController页面显示时清零
-
-//消息推送未读数量 第二级 好友：  1、使用 UNREAD_SUB_FRIEND_好友ID         作为添加好友私聊未读消息数量的Key;
-#define UNREAD_SUB_FRIEND_WEIBO     @"UNREAD_SUB_FRIEND_WEIBO"      //好友 微博上有好友加入了;
-#define UNREAD_SUB_FRIEND_REQUEST   @"UNREAD_SUB_FRIEND_REQUEST"    //添加好友请求未读消息数量;
-#define UNREAD_SUB_FRIEND_SUMMARY   @"UNREAD_SUB_FRIEND_SUMMARY"    //好友私聊消息汇总的数量;
-
-//消息推送未读数量 第二级 攻略：  使用 UNREAD_SUB_RAIDER_游戏AppID 作为各个攻略未读消息数量的Key
-
-//消息推送未读数量 第二级 礼包：  1、使用 UNREAD_SUB_GIFT_礼包ID 作为各个礼包未读消息数量的Key
-#define UNREAD_SUB_GIFT_SUMMARY     @"UNREAD_SUB_GIFT_SUMMARY"      //礼包汇总消息的未读数量
-
-//消息推送未读数量 第二级 设置：
-#define UNREAD_SUB_SETTING_SETTING  @"UNREAD_SUB_SETTING_SETTING"
-
-
-//未读消息字典存储名
-#define kUnreadPushMsgNumDataKey    @"kUnreadPushMsgNumDataKey"
-
-//全局未读消息数量更新通知，注意：需要显示未读消息badge的类都需要响应该notification ！！！！！
-#define kEventUnreadMsgCountRefreshed				@"kEventUnreadMsgCountRefreshed"
-
-//消息推送未读数量 End.^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-//#################################################################################################################

@@ -17,6 +17,12 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    self.rootVC = [[RootViewController alloc] init];
+    self.window.rootViewController = rootVC;
+    
+    NSString *code = [PersistenceHelper dataForKey:@""];
+    
     return YES;
 }
 

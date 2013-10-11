@@ -17,4 +17,5 @@
     #import "Utility.h"
     #import "SBJson.h"
     #import "PersistenceHelper.h"
+    #import "AppDelegate.h"
 #endif
