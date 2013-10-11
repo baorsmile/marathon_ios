@@ -22,6 +22,8 @@
 		945AD97E1807E1A200B09F43 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD97D1807E1A200B09F43 /* RootViewController.m */; };
 		945AD9AC1807E4DD00B09F43 /* PersistenceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9A91807E4DD00B09F43 /* PersistenceHelper.m */; };
 		945AD9B31807E70100B09F43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 945AD9B21807E70100B09F43 /* Images.xcassets */; };
+		945AD9BE1807E94B00B09F43 /* ClientConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9BB1807E94B00B09F43 /* ClientConnection.m */; };
+		945AD9BF1807E94B00B09F43 /* ConnectionBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9BD1807E94B00B09F43 /* ConnectionBase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,10 @@
 		945AD9A81807E4DD00B09F43 /* PersistenceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistenceHelper.h; sourceTree = "<group>"; };
 		945AD9A91807E4DD00B09F43 /* PersistenceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistenceHelper.m; sourceTree = "<group>"; };
 		945AD9B21807E70100B09F43 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		945AD9BA1807E94B00B09F43 /* ClientConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientConnection.h; sourceTree = "<group>"; };
+		945AD9BB1807E94B00B09F43 /* ClientConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientConnection.m; sourceTree = "<group>"; };
+		945AD9BC1807E94B00B09F43 /* ConnectionBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionBase.h; sourceTree = "<group>"; };
+		945AD9BD1807E94B00B09F43 /* ConnectionBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionBase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +194,10 @@
 		945AD9811807E2BC00B09F43 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				945AD9BA1807E94B00B09F43 /* ClientConnection.h */,
+				945AD9BB1807E94B00B09F43 /* ClientConnection.m */,
+				945AD9BC1807E94B00B09F43 /* ConnectionBase.h */,
+				945AD9BD1807E94B00B09F43 /* ConnectionBase.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -298,6 +308,8 @@
 			files = (
 				945AD9AC1807E4DD00B09F43 /* PersistenceHelper.m in Sources */,
 				945AD9591807E16700B09F43 /* AppDelegate.m in Sources */,
+				945AD9BE1807E94B00B09F43 /* ClientConnection.m in Sources */,
+				945AD9BF1807E94B00B09F43 /* ConnectionBase.m in Sources */,
 				945AD9551807E16700B09F43 /* main.m in Sources */,
 				945AD97E1807E1A200B09F43 /* RootViewController.m in Sources */,
 				945AD97B1807E19400B09F43 /* LoginViewController.m in Sources */,
@@ -513,6 +525,7 @@
 				945AD9731807E16700B09F43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		945AD9741807E16700B09F43 /* Build configuration list for PBXNativeTarget "marathonTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +534,7 @@
 				945AD9761807E16700B09F43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
