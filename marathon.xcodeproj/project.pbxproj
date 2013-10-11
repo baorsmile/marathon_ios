@@ -22,47 +22,47 @@
 		945AD97E1807E1A200B09F43 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD97D1807E1A200B09F43 /* RootViewController.m */; };
 		945AD9AC1807E4DD00B09F43 /* PersistenceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9A91807E4DD00B09F43 /* PersistenceHelper.m */; };
 		945AD9B31807E70100B09F43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 945AD9B21807E70100B09F43 /* Images.xcassets */; };
-		945AD9BE1807E94B00B09F43 /* ClientConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9BB1807E94B00B09F43 /* ClientConnection.m */; };
-		945AD9BF1807E94B00B09F43 /* ConnectionBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9BD1807E94B00B09F43 /* ConnectionBase.m */; };
-		945ADBA61807E99700B09F43 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9C31807E99600B09F43 /* ASIAuthenticationDialog.m */; };
-		945ADBA71807E99700B09F43 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9C61807E99600B09F43 /* ASIDataCompressor.m */; };
-		945ADBA81807E99700B09F43 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9C81807E99600B09F43 /* ASIDataDecompressor.m */; };
-		945ADBA91807E99700B09F43 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9CA1807E99600B09F43 /* ASIDownloadCache.m */; };
-		945ADBAA1807E99700B09F43 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9CC1807E99600B09F43 /* ASIFormDataRequest.m */; };
-		945ADBAB1807E99700B09F43 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9CE1807E99600B09F43 /* ASIHTTPRequest.m */; };
-		945ADBAC1807E99700B09F43 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9D21807E99600B09F43 /* ASIInputStream.m */; };
-		945ADBAD1807E99700B09F43 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9D41807E99600B09F43 /* ASINetworkQueue.m */; };
+		945AD9BE1807E94B00B09F43 /* ClientConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9BB1807E94B00B09F43 /* ClientConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945AD9BF1807E94B00B09F43 /* ConnectionBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9BD1807E94B00B09F43 /* ConnectionBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBA61807E99700B09F43 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9C31807E99600B09F43 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBA71807E99700B09F43 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9C61807E99600B09F43 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBA81807E99700B09F43 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9C81807E99600B09F43 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBA91807E99700B09F43 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9CA1807E99600B09F43 /* ASIDownloadCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBAA1807E99700B09F43 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9CC1807E99600B09F43 /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBAB1807E99700B09F43 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9CE1807E99600B09F43 /* ASIHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBAC1807E99700B09F43 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9D21807E99600B09F43 /* ASIInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBAD1807E99700B09F43 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9D41807E99600B09F43 /* ASINetworkQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		945ADBAE1807E99700B09F43 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9D81807E99600B09F43 /* Reachability.m */; };
-		945ADBB11807E99700B09F43 /* BlockActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9E01807E99600B09F43 /* BlockActionSheet.m */; };
-		945ADBB21807E99700B09F43 /* BlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9E21807E99600B09F43 /* BlockAlertView.m */; };
-		945ADBB31807E99700B09F43 /* BlockBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9E41807E99600B09F43 /* BlockBackground.m */; };
-		945ADBB41807E99700B09F43 /* BlockRatingPromptAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9E61807E99600B09F43 /* BlockRatingPromptAlertView.m */; };
-		945ADBB51807E99700B09F43 /* BlockTextPromptAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9E81807E99600B09F43 /* BlockTextPromptAlertView.m */; };
-		945ADBBC1807E99700B09F43 /* HJCircularBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9FC1807E99600B09F43 /* HJCircularBuffer.m */; };
-		945ADBBD1807E99700B09F43 /* HJManagedCropImageV.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9FE1807E99600B09F43 /* HJManagedCropImageV.m */; };
-		945ADBBE1807E99700B09F43 /* HJManagedGifV.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA001807E99600B09F43 /* HJManagedGifV.m */; };
-		945ADBBF1807E99700B09F43 /* HJManagedImageV.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA021807E99600B09F43 /* HJManagedImageV.m */; };
-		945ADBC01807E99700B09F43 /* HJManagedRecordV.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA051807E99600B09F43 /* HJManagedRecordV.m */; };
-		945ADBC11807E99700B09F43 /* HJMOBigFileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA071807E99600B09F43 /* HJMOBigFileCache.m */; };
-		945ADBC21807E99700B09F43 /* HJMOFileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA091807E99600B09F43 /* HJMOFileCache.m */; };
-		945ADBC31807E99700B09F43 /* HJMOHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA0B1807E99600B09F43 /* HJMOHandler.m */; };
-		945ADBC41807E99700B09F43 /* HJMOPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA0D1807E99600B09F43 /* HJMOPolicy.m */; };
-		945ADBC51807E99700B09F43 /* HJMOUserBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA101807E99600B09F43 /* HJMOUserBase.m */; };
-		945ADBC61807E99700B09F43 /* HJObjManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA121807E99600B09F43 /* HJObjManager.m */; };
-		945ADBC71807E99700B09F43 /* HJWeakMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA141807E99600B09F43 /* HJWeakMutableArray.m */; };
+		945ADBB11807E99700B09F43 /* BlockActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9E01807E99600B09F43 /* BlockActionSheet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBB21807E99700B09F43 /* BlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9E21807E99600B09F43 /* BlockAlertView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBB31807E99700B09F43 /* BlockBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9E41807E99600B09F43 /* BlockBackground.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBB41807E99700B09F43 /* BlockRatingPromptAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9E61807E99600B09F43 /* BlockRatingPromptAlertView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBB51807E99700B09F43 /* BlockTextPromptAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9E81807E99600B09F43 /* BlockTextPromptAlertView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBBC1807E99700B09F43 /* HJCircularBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9FC1807E99600B09F43 /* HJCircularBuffer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBBD1807E99700B09F43 /* HJManagedCropImageV.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9FE1807E99600B09F43 /* HJManagedCropImageV.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBBE1807E99700B09F43 /* HJManagedGifV.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA001807E99600B09F43 /* HJManagedGifV.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBBF1807E99700B09F43 /* HJManagedImageV.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA021807E99600B09F43 /* HJManagedImageV.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBC01807E99700B09F43 /* HJManagedRecordV.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA051807E99600B09F43 /* HJManagedRecordV.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBC11807E99700B09F43 /* HJMOBigFileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA071807E99600B09F43 /* HJMOBigFileCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBC21807E99700B09F43 /* HJMOFileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA091807E99600B09F43 /* HJMOFileCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBC31807E99700B09F43 /* HJMOHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA0B1807E99600B09F43 /* HJMOHandler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBC41807E99700B09F43 /* HJMOPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA0D1807E99600B09F43 /* HJMOPolicy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBC51807E99700B09F43 /* HJMOUserBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA101807E99600B09F43 /* HJMOUserBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBC61807E99700B09F43 /* HJObjManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA121807E99600B09F43 /* HJObjManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBC71807E99700B09F43 /* HJWeakMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA141807E99600B09F43 /* HJWeakMutableArray.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		945ADBF31807E99700B09F43 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA741807E99700B09F43 /* RegexKitLite.m */; };
-		945ADBF41807E99700B09F43 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA781807E99700B09F43 /* NSObject+SBJson.m */; };
-		945ADBF51807E99700B09F43 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA7B1807E99700B09F43 /* SBJsonParser.m */; };
-		945ADBF61807E99700B09F43 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA7D1807E99700B09F43 /* SBJsonStreamParser.m */; };
-		945ADBF71807E99700B09F43 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA7F1807E99700B09F43 /* SBJsonStreamParserAccumulator.m */; };
-		945ADBF81807E99700B09F43 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA811807E99700B09F43 /* SBJsonStreamParserAdapter.m */; };
-		945ADBF91807E99700B09F43 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA831807E99700B09F43 /* SBJsonStreamParserState.m */; };
-		945ADBFA1807E99700B09F43 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA851807E99700B09F43 /* SBJsonStreamWriter.m */; };
-		945ADBFB1807E99700B09F43 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA871807E99700B09F43 /* SBJsonStreamWriterAccumulator.m */; };
-		945ADBFC1807E99700B09F43 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA891807E99700B09F43 /* SBJsonStreamWriterState.m */; };
-		945ADBFD1807E99700B09F43 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA8B1807E99700B09F43 /* SBJsonTokeniser.m */; };
-		945ADBFE1807E99700B09F43 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA8D1807E99700B09F43 /* SBJsonUTF8Stream.m */; };
-		945ADBFF1807E99700B09F43 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA8F1807E99700B09F43 /* SBJsonWriter.m */; };
+		945ADBF41807E99700B09F43 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA781807E99700B09F43 /* NSObject+SBJson.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBF51807E99700B09F43 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA7B1807E99700B09F43 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBF61807E99700B09F43 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA7D1807E99700B09F43 /* SBJsonStreamParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBF71807E99700B09F43 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA7F1807E99700B09F43 /* SBJsonStreamParserAccumulator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBF81807E99700B09F43 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA811807E99700B09F43 /* SBJsonStreamParserAdapter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBF91807E99700B09F43 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA831807E99700B09F43 /* SBJsonStreamParserState.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBFA1807E99700B09F43 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA851807E99700B09F43 /* SBJsonStreamWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBFB1807E99700B09F43 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA871807E99700B09F43 /* SBJsonStreamWriterAccumulator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBFC1807E99700B09F43 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA891807E99700B09F43 /* SBJsonStreamWriterState.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBFD1807E99700B09F43 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA8B1807E99700B09F43 /* SBJsonTokeniser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBFE1807E99700B09F43 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA8D1807E99700B09F43 /* SBJsonUTF8Stream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		945ADBFF1807E99700B09F43 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA8F1807E99700B09F43 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		945ADC071807E99700B09F43 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADAA41807E99700B09F43 /* JSONKit.m */; };
 		945ADC081807E99700B09F43 /* SinaWeibo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 945ADAA61807E99700B09F43 /* SinaWeibo.bundle */; };
 		945ADC091807E99700B09F43 /* SinaWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADAA81807E99700B09F43 /* SinaWeibo.m */; };
@@ -70,6 +70,8 @@
 		945ADC0B1807E99700B09F43 /* SinaWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADAAD1807E99700B09F43 /* SinaWeiboRequest.m */; };
 		945ADC131807E99700B09F43 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 945ADAC21807E99700B09F43 /* libWeChatSDK.a */; };
 		945ADC141807E99700B09F43 /* libWeChatSDK_armv7_armv7s.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 945ADAC31807E99700B09F43 /* libWeChatSDK_armv7_armv7s.a */; };
+		945ADC6E1807EC3800B09F43 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADC6D1807EC3800B09F43 /* Utility.m */; };
+		945ADC721807EEE600B09F43 /* SCGIFImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADC711807EEE600B09F43 /* SCGIFImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +213,10 @@
 		945ADAC31807E99700B09F43 /* libWeChatSDK_armv7_armv7s.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK_armv7_armv7s.a; sourceTree = "<group>"; };
 		945ADAC41807E99700B09F43 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		945ADAC51807E99700B09F43 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		945ADC6C1807EC3800B09F43 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		945ADC6D1807EC3800B09F43 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		945ADC701807EEE600B09F43 /* SCGIFImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGIFImageView.h; sourceTree = "<group>"; };
+		945ADC711807EEE600B09F43 /* SCGIFImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCGIFImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,6 +350,8 @@
 		945AD9811807E2BC00B09F43 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				945ADC6C1807EC3800B09F43 /* Utility.h */,
+				945ADC6D1807EC3800B09F43 /* Utility.m */,
 				945AD9BA1807E94B00B09F43 /* ClientConnection.h */,
 				945AD9BB1807E94B00B09F43 /* ClientConnection.m */,
 				945AD9BC1807E94B00B09F43 /* ConnectionBase.h */,
@@ -369,6 +377,7 @@
 				945AD9FA1807E99600B09F43 /* HJCacheClasses */,
 				945ADA721807E99700B09F43 /* RegexKitLite */,
 				945ADA751807E99700B09F43 /* SBJson */,
+				945ADC6F1807EEE600B09F43 /* SCGIFImageView */,
 				945ADAA11807E99700B09F43 /* SinaWeiBo_sso */,
 				945ADAC11807E99700B09F43 /* Weixin */,
 			);
@@ -549,6 +558,15 @@
 			path = Weixin;
 			sourceTree = "<group>";
 		};
+		945ADC6F1807EEE600B09F43 /* SCGIFImageView */ = {
+			isa = PBXGroup;
+			children = (
+				945ADC701807EEE600B09F43 /* SCGIFImageView.h */,
+				945ADC711807EEE600B09F43 /* SCGIFImageView.m */,
+			);
+			path = SCGIFImageView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -662,6 +680,7 @@
 				945ADBF71807E99700B09F43 /* SBJsonStreamParserAccumulator.m in Sources */,
 				945AD9BF1807E94B00B09F43 /* ConnectionBase.m in Sources */,
 				945ADBFA1807E99700B09F43 /* SBJsonStreamWriter.m in Sources */,
+				945ADC721807EEE600B09F43 /* SCGIFImageView.m in Sources */,
 				945ADBAC1807E99700B09F43 /* ASIInputStream.m in Sources */,
 				945ADBB41807E99700B09F43 /* BlockRatingPromptAlertView.m in Sources */,
 				945ADBF51807E99700B09F43 /* SBJsonParser.m in Sources */,
@@ -670,6 +689,7 @@
 				945ADBAB1807E99700B09F43 /* ASIHTTPRequest.m in Sources */,
 				945AD9551807E16700B09F43 /* main.m in Sources */,
 				945ADC091807E99700B09F43 /* SinaWeibo.m in Sources */,
+				945ADC6E1807EC3800B09F43 /* Utility.m in Sources */,
 				945ADBF81807E99700B09F43 /* SBJsonStreamParserAdapter.m in Sources */,
 				945ADBB31807E99700B09F43 /* BlockBackground.m in Sources */,
 				945ADBAA1807E99700B09F43 /* ASIFormDataRequest.m in Sources */,

@@ -12,8 +12,6 @@
 #import "HJMOHandler.h"
 #import <UIKit/UIKit.h>
 
-#import "SCGIFImageView.h"
-
 #import "Utility.h"
 
 @class HJManagedGifV;

@@ -14,4 +14,8 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "Const.h"
+    #import "Utility.h"
+    #import "SBJson.h"
+    #import "PersistenceHelper.h"
+    #import "ClientConnection.h"
 #endif
