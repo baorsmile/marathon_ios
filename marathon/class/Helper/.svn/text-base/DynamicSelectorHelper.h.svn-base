@@ -1,0 +1,45 @@
+//
+//  DynamicSelectorHelper.h
+//  Shake
+//
+//  Created by zhangluyi on 11-11-1.
+//  Copyright 2011年 __MyCompanyName__. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+#define SELECTOR_INIT_FILE              @"CategoryFile"
+#define SELECTOR_LAST_UPDATE_DATE       @"lastUpdateDate"
+#define SELECTOR_LAST_UPDATE_MD5        @"lastUpdateMD5"
+
+
+@interface DynamicSelectorHelper : NSObject<ClientConnectionDelegate> {
+	
+    NSString *currentCommonTypesMd5;
+	
+	ClientConnection* clientConnection;
+}
+@property (nonatomic, retain) ClientConnection* clientConnection; 
+@property (nonatomic, copy)   NSString *currentCommonTypesMd5;
+
+@property (nonatomic, retain) NSString *stringForAppShareTitle;     //微信、QQ分享标题
+@property (nonatomic, retain) NSString *stringForAppShareContent;   //微信、QQ分享内容
+@property (nonatomic, retain) NSString *stringForAppShareJumpURL;   //微信、QQ分享跳转地址
+
+@property (nonatomic, retain) NSString *stringForInviteTitle;       //微信、QQ邀请标题
+@property (nonatomic, retain) NSString *stringForInviteContent;     //微信、QQ邀请内容
+@property (nonatomic, retain) NSString *stringForInviteJumpURL;     //微信、QQ邀请跳转地址
+
+@property (nonatomic, retain) NSString *stringForLeftGiftPackage;   //礼包 左侧Tab对应的文字
+@property (nonatomic, retain) NSString *stringForTitleGiftPackage;  //礼包 标题对应的文字
+
+@property (nonatomic, retain) NSString *stringForShowDownload;      //是否显示游戏卡片的下载、评论按钮
+
+
+- (BOOL)menuNeedUpdate;
+- (void)updateMenu;
+- (void)createMenu;
+- (id)initWithUrl:(NSString *)categoryUrl;
+- (BOOL)parseMenuJson:(NSDictionary *)jsonDict;
+
+@end

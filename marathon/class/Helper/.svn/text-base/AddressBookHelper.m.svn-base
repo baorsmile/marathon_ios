@@ -1,0 +1,270 @@
+//
+//  AddressBookHelper.m
+//  Shake
+//
+//  Created by zhangluyi on 11-11-11.
+//  Copyright 2011年 __MyCompanyName__. All rights reserved.
+//
+
+#import "AddressBookHelper.h"
+
+@implementation AddressBookHelper
+@synthesize contactsArray;
+@synthesize inShakeArray;
+@synthesize outShakeArray;
+@synthesize lastUpdateMD5;
+@synthesize clientConnection;
+@synthesize friendArray;
+@synthesize currentMD5;
+@synthesize currentContactString;
+@synthesize lastUpdateDate;
+@synthesize myInfo;
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        [self initConnection];
+        
+        if ([self needUpdateContacts]) {
+            [self updateContacts];
+        }
+    }
+    return self;
+}
+
+- (BOOL)needUpdateContacts {
+	if (self.lastUpdateDate == nil) {
+		return YES;
+	} else {
+		NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+		unsigned int unitFlags = kCFCalendarUnitMinute; //kCFCalendarUnitSecond
+		NSDateComponents *comps = [gregorian components:unitFlags 
+											   fromDate:lastUpdateDate  
+												 toDate:[NSDate date] options:0];
+		int minute = [comps minute];
+		
+		return (minute >= 30) ? YES : NO;
+	}
+}
+
+- (void)updateContacts {
+    @synchronized (self) {
+        
+        NSMutableArray *unSortedArray = [NSMutableArray array];
+        
+        ABAddressBookRef addressBook = ABAddressBookCreate();
+        CFArrayRef peoples = ABAddressBookCopyArrayOfAllPeople(addressBook);
+        if (peoples != NULL) {
+            for (int i = 0; i < CFArrayGetCount(peoples); i++) {
+                ABRecordRef person = CFArrayGetValueAtIndex(peoples, i);
+                //            NSArray *phoneArray = [AddressBookUtils getPhones:person];
+                NSDictionary *phoneDic = [AddressBookUtils getPerson:person];
+                //            if (phoneArray && [phoneArray count] > 0) {
+                //                [unSortedArray addObjectsFromArray:phoneArray];
+                //            }
+                if ([phoneDic objectForKey:@"phones"] && [[phoneDic objectForKey:@"phones"] count] > 0) {
+                    BOOL isRepeat = NO;
+                    for (NSDictionary* hadDict in unSortedArray) {
+                        if ([[[hadDict objForKey:@"fullName"] stringValue] isEqualToString:[[phoneDic objForKey:@"fullName"] stringValue]] && [[[[hadDict objForKey:@"phones"] objectAtIndex:0] stringValue] isEqualToString:[[[phoneDic objForKey:@"phones"] objectAtIndex:0] stringValue]]) {
+                            isRepeat = YES;
+                            break;
+                        }
+                    }
+                    
+                    if (NO == isRepeat) {
+                        [unSortedArray addObject:phoneDic];
+                    }
+                }
+            }
+            CFRelease(peoples);
+        }
+
+        if (addressBook != NULL)    CFRelease(addressBook);
+        
+        //排序
+        NSArray *sortedArray = [unSortedArray sortedArrayUsingComparator: ^(id obj1, id obj2) {
+            
+            NSString *name1 = [obj1 objForKey:@"fullName"];
+            NSString *name2 = [obj2 objForKey:@"fullName"];
+            
+            return [name1 localizedCaseInsensitiveCompare:name2];        
+        }];
+        
+        if (self.contactsArray && [self.contactsArray count] > 0) {
+            [self.contactsArray removeAllObjects];
+        } else {
+            self.contactsArray = [NSMutableArray array];
+        }
+        
+        [self.contactsArray addObjectsFromArray:sortedArray];
+        
+        NSString *string = [self stringForContracts];
+        if (string && [string length] > 0) {
+            self.currentContactString = string;
+            self.currentMD5 = [string md5];
+        }
+        
+        self.lastUpdateMD5 = [PersistenceHelper dataForKey:@"lastUpdateMD5"];
+        if (self.currentMD5 && self.lastUpdateMD5 && 
+            [lastUpdateMD5 length] > 0 && [self.currentMD5 length] > 0 && 
+            [self.currentMD5 isEqualToString:self.lastUpdateMD5]) {
+            //DO NOthing
+        } else {
+            [self uploadContact];
+        }
+		
+		NSString *canUseContacterStr = [PersistenceHelper dataForKey:@"canUseContacter"];
+		
+		if (canUseContacterStr && [canUseContacterStr isEqualToString:@"yes"]) {
+			self.lastUpdateDate = [NSDate date];
+		}else {
+//			[self spliteContact]; //拆分通信录
+//			[[NSNotificationCenter defaultCenter] postNotificationOnMainThreadName:kUpdateFriendFinished object:nil];
+		}
+
+    }
+    
+}
+
+- (void)initConnection {
+    //init ClientConnection
+    self.clientConnection = [[ClientConnection alloc] init];
+    clientConnection.delegate = self;
+}
+
+- (NSString *)stringForContracts {
+    
+    @synchronized (self) {
+        NSMutableString *contactsString = [NSMutableString string];
+        for (int i = 0; i < [self.contactsArray count]; i++) {
+            NSDictionary *dict = [self.contactsArray objectAtIndex:i];
+            NSArray *phoneArray = [dict objForKey:@"phones"];
+            NSString *phone = @"";
+            for (NSString *tempStr in phoneArray) {
+                phone = [NSString stringWithFormat:@"%@%@",phone,tempStr];
+            }
+            NSString *fullName = [dict objForKey:@"fullName"];
+            
+            if (phone && fullName && [[phone removeSpace] length] >= 5 && [[fullName removeSpace] length] > 0) {
+                [contactsString appendFormat:@"%@,%@;", phone, fullName];
+            }
+        }
+        return contactsString;
+    }
+
+}
+
+- (void)updateFriends {
+    NSString *searchString = APPEXPERT_INVITED_FRIENDS;
+    [clientConnection get:searchString withID:kRequestFriendInShake];
+}
+
+- (void)stringDataDidFailLoading:(ASIHTTPRequest *)_request {
+    [[NSNotificationCenter defaultCenter] 
+     postNotificationOnMainThreadName:kUpdateFriendFail object:nil];
+}
+
+- (void)stringDataDidFinishLoading:(ASIHTTPRequest *)_request {
+    
+    NSDictionary *jsonDict = [[_request responseString] JSONValue];
+    if (jsonDict == nil || [[jsonDict objForKey:@"result"] intValue] == 0) {
+        [[NSNotificationCenter defaultCenter] 
+         postNotificationOnMainThreadName:kUpdateFriendFail object:nil];
+        return;
+    }
+    
+    NSDictionary *userInfo = [_request userInfo];
+    NSInteger requestId = [[userInfo objForKey:@"requestID"] intValue];
+
+    if (requestId == kRequestFriendInShake) {
+        self.myInfo = [jsonDict objForKeyPath:@"data.shake_friends.user"];
+        
+        NSArray *array = [jsonDict objForKeyPath:@"data.shake_friends.friends"];
+        if (array && [array count] > 0) {
+            if (self.friendArray == nil) {
+                self.friendArray = [NSMutableArray array];
+            } else {
+                [self.friendArray removeAllObjects];
+            }
+            
+            [self.friendArray addObjectsFromArray:array];
+        }
+		[self spliteContact]; //拆分通信录
+		[[NSNotificationCenter defaultCenter] postNotificationOnMainThreadName:kUpdateFriendFinished object:nil];
+    }
+    
+    if (requestId == kUploadAddressBook) {
+        [PersistenceHelper setData:self.currentMD5 forKey:@"lastUpdateMD5"];
+        self.lastUpdateMD5 = self.currentMD5;
+        //上传通信录成功
+        [self updateFriends];
+    }
+}
+
+- (void)spliteContact {
+    @synchronized (self) {
+        if (self.inShakeArray == nil) {
+            self.inShakeArray = [NSMutableArray array];
+        } else {
+            [self.inShakeArray removeAllObjects];
+        }
+        
+        if (self.outShakeArray == nil) {
+            self.outShakeArray = [NSMutableArray array];
+        } else {
+            [self.outShakeArray removeAllObjects];
+        }
+        
+        for (NSDictionary *dict in self.contactsArray) {
+//            NSString *phone = [dict objForKey:@"phone"];
+            NSArray *phoneArray = [dict objectForKey:@"phones"];
+            for (NSString *phone in phoneArray) {
+                if (phone && [phone length] > 0) {
+                    int index = -1;
+                    for (int j = 0; j < [self.friendArray count]; j++) {
+                        NSString *keyPhone = [[self.friendArray objectAtIndex:j] objForKey:@"phone"];
+                        if ([phone isEqualToString:keyPhone]) {
+                            index = j;
+                            break;
+                        }
+                    }
+                    if (index != -1) { //找到了
+                        NSMutableDictionary *tempDic = [NSMutableDictionary dictionaryWithDictionary:dict];
+                        [tempDic setObject:[[friendArray objectAtIndex:index] objForKey:@"uuid"] forKey:@"uid"];
+                        [self.inShakeArray addObject:tempDic];
+                        [self.friendArray removeObjectAtIndex:index];
+                        break;
+                    } else { //没找到
+                        if ([phone isEqualToString:[phoneArray lastObject]]) {
+                            [self.outShakeArray addObject:dict];
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+     
+-(void)uploadContact {
+	
+	NSString *canUseContacterStr = [PersistenceHelper dataForKey:@"canUseContacter"];
+	
+	if (canUseContacterStr && [canUseContacterStr isEqualToString:@"yes"]) {
+		if (currentMD5) {
+			NSMutableDictionary *sendData = [NSMutableDictionary dictionary];
+			[sendData setValue:@"address_book" forKey:@"m"];
+			[sendData setValue:kClientVersion forKey:@"version"];
+			[sendData setValue:kVia forKey:@"via"];
+			[sendData setValue:kUDID forKey:@"udid"];
+            [sendData setValue:kPid forKey:@"pid"];
+            [sendData setValue:kBuildForSDK forKey:@"sdk"];
+			[sendData setValue:self.currentMD5 forKey:@"md5"];
+			[sendData setValue:@"1" forKey:@"act"];
+			[sendData setValue:@"1" forKey:@"type"];
+			[sendData setValue:self.currentContactString forKey:@"contact_list"];
+			[clientConnection postToURL:apiHost withData:sendData requestID:kUploadAddressBook type:kUploadNormal];
+		}
+	}
+}
+
+@end

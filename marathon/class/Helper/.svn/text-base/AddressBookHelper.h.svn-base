@@ -1,0 +1,50 @@
+//
+//  AddressBookHelper.h
+//  Shake
+//
+//  Created by zhangluyi on 11-11-11.
+//  Copyright 2011年 __MyCompanyName__. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "AddressBookUtils.h"
+#import "NSString+MD5.h"
+#import "NSNotificationCenter+MainThread.h"
+
+@interface AddressBookHelper : NSObject {
+    NSMutableArray *contactsArray;
+    NSMutableArray *inShakeArray;
+    NSMutableArray *outShakeArray;
+    NSString *lastUpdateMD5;
+    NSString *currentMD5;
+    ClientConnection *clientConnection;
+    NSMutableArray *friendArray;
+    NSString *currentContactString;
+    NSDictionary *myInfo;
+    NSDate *lastUpdateDate;
+}
+
+@property (nonatomic, strong) NSDictionary *myInfo;
+@property (nonatomic, strong) NSDate *lastUpdateDate;
+@property (nonatomic, strong) NSString *currentContactString;
+@property (nonatomic, strong) NSString         *currentMD5;
+@property (nonatomic, strong) NSMutableArray   *friendArray;
+@property (nonatomic, strong) ClientConnection *clientConnection;
+@property (nonatomic, strong) NSString       *lastUpdateMD5;
+@property (nonatomic, strong) NSMutableArray *contactsArray;
+@property (nonatomic, strong) NSMutableArray *inShakeArray;
+@property (nonatomic, strong) NSMutableArray *outShakeArray;
+
+- (BOOL)needUpdateContacts;
+- (void)updateContacts;
+- (void)updateFriends;
+- (void)uploadContact;
+@end
+
+@interface AddressBookHelper ()
+
+- (NSString *)stringForContracts;
+- (void)initConnection;
+- (void)spliteContact;
+
+@end
