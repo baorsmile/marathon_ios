@@ -126,37 +126,6 @@ char indexTitleOfString(unsigned short string);
 //判断某个点是否在某个区域里
 + (BOOL)isPointInRect:(CGPoint)p rect:(CGRect)rect;
 
-//得到过滤后的后台进程名
-+ (NSMutableArray *)getBackRunningExe;
-//从本地存储的后台进程名数据中删除一条数据
-+ (void)deleteProcessFromStoredData:(NSDictionary*)toDeleteGameInfo;
-
-//重新保存已安装应用
-+ (NSMutableArray*)restoreInstalledApps:(NSArray *)tosaveArray;
-//添加已安装应用
-+ (void)saveInstalledApps:(NSArray *)unsavedArray;
-+ (void)saveInstalledApp:(NSDictionary *)toSaveGameDict;
-+ (NSArray *)getInstalledApps;
-+ (BOOL)deleteInstalledApps:(NSDictionary *)dic;
-
-//是否已经添加过某游戏
-+ (BOOL)isAttentionThisGame:(NSDictionary*)gameDict;
-//保存应用信息到用户手动添加数据中，同时，它还调用saveInstalledApp
-+ (void)saveUserAddApp:(NSDictionary *)toSaveGameDict;
-
-//未读消息数量获取与设置
-//获得某一级或二级未读消息数量
-+ (NSInteger)getUnreadMsgNumByMainKey:(NSString*)mainKey subKey:(NSString*)subKey;
-//设置某一级或二级未读消息数量
-+ (void)setUnreadMsgNumByMainKey:(NSString*)mainKey subKey:(NSString*)subKey countValue:(NSInteger)countValue postNotification:(BOOL)needPostNotification;
-//增加某二级未读消息数量
-+ (NSInteger)increaseUnreadMsgNumByMainKey:(NSString*)mainKey subKey:(NSString*)subKey increaseValue:(NSInteger)increase postNotification:(BOOL)needPostNotification;
-//减少某二级未读消息数量
-+ (NSInteger)decreaseUnreadMsgNumByMainKey:(NSString*)mainKey subKey:(NSString*)subKey decreaseValue:(NSInteger)decrease postNotification:(BOOL)needPostNotification;
-//清除已经不存在的游戏相关的未读消息
-+ (void)cleanDisappearedGameUnreadMsgCount:(BOOL)needPostNotification;
-//清除已经不存在的好友相关的未读消息
-+ (void)cleanDisappearedFriendUnreadMsgCount:(NSArray*)allFriendsArray postNotification:(BOOL)needPostNotification;
 
 //截取部分图像
 + (UIImage*)getSubImage:(UIImage*)originalImage forRect:(CGRect)rect;

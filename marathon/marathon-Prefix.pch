@@ -17,5 +17,4 @@
     #import "Utility.h"
     #import "SBJson.h"
     #import "PersistenceHelper.h"
-    #import "ClientConnection.h"
 #endif

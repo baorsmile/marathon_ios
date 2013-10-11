@@ -172,7 +172,7 @@
 
 
 -(void) saveCounts {
-	NSMutableDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:
+	NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:
 								 [NSNumber numberWithLongLong:byteCount],@"bytes",
 								 [NSNumber numberWithLong:fileCount],@"files",nil];
 	[dict writeToFile:countsPath atomically:YES];
@@ -222,7 +222,7 @@ int fileAgeCompareFunction(id obj1, id obj2, void *context) {
 		NSError* e;
 		NSDictionary* fsAttributes = [[NSFileManager defaultManager] attributesOfItemAtPath:filename error:&e];		
 		double ageSeconds = -1* [[fsAttributes fileModificationDate] timeIntervalSinceNow];
-		long filesize = [fsAttributes fileSize];
+        long filesize = (long)[fsAttributes fileSize];
 		if (ageSeconds>fileAgeLimit && fileAgeLimit>0) {
 			//old files get deleted right away
 			NSError* err=nil;
