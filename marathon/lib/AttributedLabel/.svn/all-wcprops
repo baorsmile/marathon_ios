@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/AttributedLabel
+END
+OHAttributedLabel.h
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/AttributedLabel/OHAttributedLabel.h
+END
+NSAttributedString+Attributes.h
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/AttributedLabel/NSAttributedString+Attributes.h
+END
+OHAttributedLabel.m
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/AttributedLabel/OHAttributedLabel.m
+END
+NSAttributedString+Attributes.m
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/AttributedLabel/NSAttributedString+Attributes.m
+END

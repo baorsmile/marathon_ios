@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Vendor/libidn
+END
+libidn.a
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Vendor/libidn/libidn.a
+END
+stringprep.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Vendor/libidn/stringprep.h
+END
+libidn-1.24.tar.gz
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Vendor/libidn/libidn-1.24.tar.gz
+END
+idn-int.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Vendor/libidn/idn-int.h
+END

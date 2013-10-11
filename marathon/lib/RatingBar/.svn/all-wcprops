@@ -1,0 +1,341 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar
+END
+SCRSegmentedControl.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRSegmentedControl.m
+END
+SCRSettingsService.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRSettingsService.h
+END
+SCRRatingView.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRRatingView.m
+END
+SCRSettingsService.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRSettingsService.m
+END
+SCRTextFieldCell.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRTextFieldCell.h
+END
+NSError+SCRMethods.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/NSError+SCRMethods.h
+END
+SCRActivityIndicatorCell.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRActivityIndicatorCell.h
+END
+SCRSymbolicProgressBar.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRSymbolicProgressBar.h
+END
+SCRTextFieldCell.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRTextFieldCell.m
+END
+NSError+SCRMethods.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/NSError+SCRMethods.m
+END
+SCRActivityIndicatorCell.m
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRActivityIndicatorCell.m
+END
+SCRFooterLabel.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRFooterLabel.h
+END
+UIApplication+UniversalApp.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/UIApplication+UniversalApp.h
+END
+UIAlertView+SCRMethods.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/UIAlertView+SCRMethods.h
+END
+SCRSymbolicProgressBar.m
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRSymbolicProgressBar.m
+END
+SCRSwitchCell.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRSwitchCell.h
+END
+SCRTabOrder.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRTabOrder.h
+END
+SCRVoiceMeter.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRVoiceMeter.h
+END
+SCRFooterLabel.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRFooterLabel.m
+END
+UIActionSheet+SCRMethods.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/UIActionSheet+SCRMethods.h
+END
+UIApplication+UniversalApp.m
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/UIApplication+UniversalApp.m
+END
+UIAlertView+SCRMethods.m
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/UIAlertView+SCRMethods.m
+END
+SCRGrfx.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRGrfx.h
+END
+SCRSwitchCell.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRSwitchCell.m
+END
+SCRTabOrder.m
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRTabOrder.m
+END
+SCRVoiceMeter.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRVoiceMeter.m
+END
+UIActionSheet+SCRMethods.m
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/UIActionSheet+SCRMethods.m
+END
+NSMutableArray+SCRQueue.h
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/NSMutableArray+SCRQueue.h
+END
+SCRGrfx.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRGrfx.m
+END
+SCRViewSlider.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRViewSlider.h
+END
+NSMutableArray+SCRQueue.m
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/NSMutableArray+SCRQueue.m
+END
+SCRLog.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRLog.h
+END
+SCRViewSlider.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRViewSlider.m
+END
+SCROptionTableController.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCROptionTableController.h
+END
+SCRSegmentColorScheme.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRSegmentColorScheme.h
+END
+SCROptionTableController.m
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCROptionTableController.m
+END
+SCRRadioCell.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRRadioCell.h
+END
+SCRSegment.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRSegment.h
+END
+SCRRadioController.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRRadioController.h
+END
+SCROptionBasket.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCROptionBasket.h
+END
+SCRRadioCell.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRRadioCell.m
+END
+SCRColorScheme.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRColorScheme.h
+END
+SCRMemoryManagement.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRMemoryManagement.h
+END
+NSArray+Linq.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/NSArray+Linq.h
+END
+NSString+SCRMethods.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/NSString+SCRMethods.h
+END
+SCRSegment.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRSegment.m
+END
+SCRRadioController.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRRadioController.m
+END
+SCROptionBasket.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCROptionBasket.m
+END
+UIApplication+LocalNotifications.h
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/UIApplication+LocalNotifications.h
+END
+NSArray+Linq.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/NSArray+Linq.m
+END
+NSString+SCRMethods.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/NSString+SCRMethods.m
+END
+SCRAppDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRAppDelegate.h
+END
+SCRSegmentedControl.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRSegmentedControl.h
+END
+UIApplication+LocalNotifications.m
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/UIApplication+LocalNotifications.m
+END
+SCRRatingView.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRRatingView.h
+END
+SCRAppDelegate.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/lehe/!svn/ver/23982/trunk/clients/ios/AppExpert/AppExpert/lib/RatingBar/SCRAppDelegate.m
+END

@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/lehe/!svn/ver/25513/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses
+END
+HJManagedGifV.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJManagedGifV.h
+END
+HJManagedCropImageV.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/lehe/!svn/ver/25056/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJManagedCropImageV.h
+END
+HJMOHandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJMOHandler.h
+END
+HJMOUserBase.m
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJMOUserBase.m
+END
+HJMOUser.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJMOUser.h
+END
+HJObjManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJObjManager.m
+END
+HJManagedGifV.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJManagedGifV.m
+END
+HJManagedCropImageV.m
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/lehe/!svn/ver/25056/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJManagedCropImageV.m
+END
+HJMOHandler.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJMOHandler.m
+END
+HJManagedImageVDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJManagedImageVDelegate.h
+END
+HJMOBigFileCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJMOBigFileCache.h
+END
+HJManagedRecordV.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/lehe/!svn/ver/25498/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJManagedRecordV.h
+END
+HJManagedImageV.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/lehe/!svn/ver/24955/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJManagedImageV.h
+END
+HJMOBigFileCache.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJMOBigFileCache.m
+END
+HJManagedRecordV.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/lehe/!svn/ver/25513/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJManagedRecordV.m
+END
+HJManagedImageV.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/lehe/!svn/ver/24955/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJManagedImageV.m
+END
+HJMOPolicy.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJMOPolicy.h
+END
+HJCircularBuffer.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJCircularBuffer.h
+END
+HJMOFileCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJMOFileCache.h
+END
+HJMOPolicy.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJMOPolicy.m
+END
+HJWeakMutableArray.h
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJWeakMutableArray.h
+END
+HJCircularBuffer.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJCircularBuffer.m
+END
+HJMOFileCache.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJMOFileCache.m
+END
+HJMOUserBase.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJMOUserBase.h
+END
+HJObjManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJObjManager.h
+END
+HJWeakMutableArray.m
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/lehe/!svn/ver/23547/trunk/clients/ios/AppExpert/AppExpert/lib/HJCacheClasses/HJWeakMutableArray.m
+END

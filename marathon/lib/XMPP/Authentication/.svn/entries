@@ -1,0 +1,80 @@
+10
+
+dir
+25855
+http://wanghuiyu@192.168.1.31/svn/lehe/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Authentication
+http://wanghuiyu@192.168.1.31/svn/lehe
+
+
+
+2013-07-11T04:57:10.619231Z
+23549
+wangwq
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+82c74306-dc43-4ae5-800d-329a9ea7ba8e
+
+X-Facebook-Platform
+dir
+
+Deprecated-Plain
+dir
+
+Digest-MD5
+dir
+
+Plain
+dir
+
+Anonymous
+dir
+
+Deprecated-Digest
+dir
+
+XMPPSASLAuthentication.h
+file
+
+
+
+delete
+2013-09-22T10:22:20.000000Z
+17d8a6341cc3588fa55a4958d7e4449d
+2013-07-11T04:57:10.619231Z
+23549
+wangwq
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3525
+

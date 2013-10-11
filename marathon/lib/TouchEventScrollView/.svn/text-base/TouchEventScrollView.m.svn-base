@@ -1,0 +1,108 @@
+//
+//  TouchEventScrollView.m
+//  AppExpert
+//
+//  Created by wangweiqing on 13-08-20.
+//  Copyright 2013年 __MyCompanyName__. All rights reserved.
+//
+
+#import "TouchEventScrollView.h"
+
+#define KEY_WINDOW  [[UIApplication sharedApplication]keyWindow]
+
+@implementation TouchEventScrollView
+@synthesize touchDelegate;
+
+//传递touch事件
+- (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event
+{
+    
+    if (touchDelegate && [touchDelegate respondsToSelector:@selector(touchesBegan:withEvent:)]) {
+        [touchDelegate touchesBegan:touches withEvent:event];
+    }else {
+        if(!self.dragging)
+            
+        {
+            [[self nextResponder]touchesBegan:touches withEvent:event];
+        }
+        
+        [super touchesBegan:touches withEvent:event];
+        
+    }
+    
+    NSLog(@"TouchEventScrollView touch Began");
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    
+    if (touchDelegate && [touchDelegate respondsToSelector:@selector(touchesMoved:withEvent:)]) {
+        [touchDelegate touchesMoved:touches withEvent:event];
+    }else {
+        if(!self.dragging)
+        {
+            [[self nextResponder]touchesMoved:touches withEvent:event];
+        }
+        [super touchesMoved:touches withEvent:event];
+    }
+}
+
+
+
+- (void)touchesEnded:(NSSet*)touches withEvent:(UIEvent*)event
+{
+    
+    if (touchDelegate && [touchDelegate respondsToSelector:@selector(touchesEnded:withEvent:)]) {
+        [touchDelegate touchesEnded:touches withEvent:event];
+    }
+    
+    UITouch *touch=[touches anyObject];
+    CGPoint currentPoint = [touch locationInView:KEY_WINDOW];
+    CGFloat diffX = fabsf(currentPoint.x - startPoint.x);
+    CGFloat diffY = fabsf(currentPoint.y - startPoint.y);
+    if (diffX > 2 || diffY > 2) {
+        //划动事件
+    }else {
+        //点击事件
+        if(!self.dragging)
+        {
+            [[self nextResponder]touchesEnded:touches withEvent:event];
+        }
+        [super touchesEnded:touches withEvent:event];
+    }
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (touchDelegate && [touchDelegate respondsToSelector:@selector(touchesCancelled:withEvent:)]) {
+        [touchDelegate touchesCancelled:touches withEvent:event];
+    }
+    
+    //    if(!self.dragging)
+    {
+        [[self nextResponder]touchesCancelled:touches withEvent:event];
+    }
+    [super touchesCancelled:touches withEvent:event];
+}
+
+
+//父视图是否可以将消息传递给子视图，yes是将事件传递给子视图，则不滚动，no是不传递则继续滚动
+- (BOOL)touchesShouldBegin:(NSSet *)touches withEvent:(UIEvent *)event inContentView:(UIView *)view
+{
+    //返回yes 是不滚动 scroll 返回no 是滚动scroll
+    
+    UITouch *touch=[touches anyObject];
+    startPoint = [touch locationInView:KEY_WINDOW];
+    
+    return YES;
+}
+
+//Yes是子视图取消继续接受touch消息（可以滚动），NO是子视图可以继续接受touch事件（不滚动）
+//默认的情况下当view不是一个UIControlo类的时候，值是yes,否则是no
+//调用情况是这样的一般是在发送tracking messages消息后会调用这个函数，来判断scroll是否滚动，还是接受子视图的touch 事件
+- (BOOL)touchesShouldCancelInContentView:(UIView *)view
+{
+    //    DMLog(@"用户点击的视图 %@",view);
+    return NO;
+} 
+
+@end

@@ -1,0 +1,58 @@
+10
+
+dir
+25855
+http://wanghuiyu@192.168.1.31/svn/lehe/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Extensions
+http://wanghuiyu@192.168.1.31/svn/lehe
+
+
+
+2013-08-30T04:54:22.347244Z
+24514
+wanghuiyu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+82c74306-dc43-4ae5-800d-329a9ea7ba8e
+
+Reconnect
+dir
+
+XEP-0115
+dir
+
+XEP-0045
+dir
+
+XEP-0054
+dir
+
+XEP-0153
+dir
+
+XEP-0082
+dir
+
+XEP-0184
+dir
+
+CoreDataStorage
+dir
+
+Roster
+dir
+
+XEP-0203
+dir
+

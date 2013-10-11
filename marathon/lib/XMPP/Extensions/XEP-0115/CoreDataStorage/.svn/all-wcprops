@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Extensions/XEP-0115/CoreDataStorage
+END
+XMPPCapsCoreDataStorageObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Extensions/XEP-0115/CoreDataStorage/XMPPCapsCoreDataStorageObject.h
+END
+XMPPCapabilitiesCoreDataStorage.m
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Extensions/XEP-0115/CoreDataStorage/XMPPCapabilitiesCoreDataStorage.m
+END
+XMPPCapsCoreDataStorageObject.m
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Extensions/XEP-0115/CoreDataStorage/XMPPCapsCoreDataStorageObject.m
+END
+XMPPCapsResourceCoreDataStorageObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Extensions/XEP-0115/CoreDataStorage/XMPPCapsResourceCoreDataStorageObject.h
+END
+XMPPCapabilitiesCoreDataStorage.h
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Extensions/XEP-0115/CoreDataStorage/XMPPCapabilitiesCoreDataStorage.h
+END
+XMPPCapsResourceCoreDataStorageObject.m
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Extensions/XEP-0115/CoreDataStorage/XMPPCapsResourceCoreDataStorageObject.m
+END

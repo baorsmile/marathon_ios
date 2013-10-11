@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/lehe/!svn/ver/25404/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Core
+END
+XMPPMessage.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/lehe/!svn/ver/25404/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Core/XMPPMessage.h
+END
+XMPPModule.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Core/XMPPModule.h
+END
+XMPPLogging.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Core/XMPPLogging.h
+END
+XMPPElement.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Core/XMPPElement.h
+END
+XMPPMessage.m
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/lehe/!svn/ver/25404/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Core/XMPPMessage.m
+END
+XMPPModule.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Core/XMPPModule.m
+END
+XMPPStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Core/XMPPStream.h
+END
+XMPPParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Core/XMPPParser.h
+END
+XMPPFramework.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Core/XMPPFramework.h
+END
+XMPPElement.m
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Core/XMPPElement.m
+END
+XMPPStream.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Core/XMPPStream.m
+END
+XMPPParser.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Core/XMPPParser.m
+END
+XMPPPresence.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Core/XMPPPresence.h
+END
+XMPPJID.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Core/XMPPJID.h
+END
+XMPPIQ.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Core/XMPPIQ.h
+END
+XMPPPresence.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Core/XMPPPresence.m
+END
+XMPPJID.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Core/XMPPJID.m
+END
+XMPPInternal.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Core/XMPPInternal.h
+END
+XMPPIQ.m
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Core/XMPPIQ.m
+END
+XMPP.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/lehe/!svn/ver/23549/trunk/clients/ios/AppExpert/AppExpert/lib/XMPP/Core/XMPP.h
+END
