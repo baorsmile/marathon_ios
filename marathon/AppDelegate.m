@@ -26,6 +26,7 @@
         DMLog(@"自动登录成功");
     }else{
         self.loginVC = [[LoginViewController alloc] init];
+        loginVC.delegate = self;
         [self.window addSubview:loginVC.view];
     }
     
@@ -57,6 +58,19 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - LoginViewControllerDelegate
+- (void)loginSuccess{
+    [UIView animateWithDuration:0.5 animations:^{
+        self.loginVC.view.frame = CGRectMake(0, SCREEN_HEIGHT, self.loginVC.view.frame.size.width, self.loginVC.view.frame.size.height);
+    } completion:^(BOOL finished) {
+        double delayInSeconds = 1.2;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            [[NSNotificationCenter defaultCenter] postNotificationName:kLoginSuccessNotification object:nil];
+        });
+    }];
 }
 
 @end

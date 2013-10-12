@@ -33,13 +33,6 @@
 #define VIEW_HEIGHT_HORIZONTAL SCREEN_WIDTH - 20
 #define VIEW_WIDTH SCREEN_WIDTH
 
-
-#define kApp            @"wanyou"     //For Wwq       mycode@163.com
-#define kVersionCode    @"0.92"
-#define kServerVersion  @"1.1"
-#define kBuildForSDK    @"0"           //0 for APP , 1 for SDK
-
-
 #define kAppID                       @""
 
 
@@ -56,18 +49,6 @@
 //本地cookies nsdictionary
 #define kLocalCookieData                    @"kLocalCookieData"
 
-#define WeiXinAppID                         @"wx5ba77a2d9cc07927"
-
-#define QQAppID                             @"QQ68BD9A19"
-
-//腾讯接入
-#define TENCENT_APP_ID                      @"100506628"
-#define TENCENT_APP_KEY                     @"15ffc190eeca20d3ce34d883862c9894"
-//微薄接入
-#define WEIBO_APP_KEY                       @"3667425264"
-#define WEIBO_SECRET_KEY                    @"27515c2004b19ae41bc4ae80db16e7a2"
-#define WEIBO_URI_PATH                      @"http://wanyou.lehe.com/api2/callback.php"
-
 #ifndef IOS_VERSION 
 #define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue] 
 #endif
@@ -78,8 +59,6 @@
 #define SYSTEM_VERSION_GREATER_THAN(v)      ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
 
 #define kNetworkErrorMessage                @"网络不给力，请稍候重试"
-#define kErrorIcon                          @"ico_error_info_2.png"
-#define kSuccessIcon                        @"ico_sucess.png"
 
 //获取谷歌地图
 #define kRequestGoogleMapPathInfo			1999
@@ -170,14 +149,11 @@ typedef enum kUPLOAD_TYPE {
 	kUploadTypeRecord
 } UPLOAD_TYPE;
 
-//Notification
-#define kUpdateFriendFinished                   @"UpdateFriendFinished"
-#define kUpdateFriendFail                       @"UpdateFriendFail"
-#define kGroupCenterRefreshNotification         @"GroupCenterRefreshNotification"
-#define kFriendCenterRefreshNotification        @"FriendCenterRefreshNotification"
+#pragma mark - Notification
+#define kLoginSuccessNotification               @"LoginSuccessNotification"
 
 #pragma mark - PersistenceHelper
-#define INVITECODE                             @"invite_code"
+#define INVITECODE                              @"invite_code"
 
 
 #pragma mark - 拼接网络请求串

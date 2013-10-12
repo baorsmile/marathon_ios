@@ -10,7 +10,7 @@
 #import "LoginViewController.h"
 #import "RootViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate,LoginViewControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, strong) RootViewController *rootVC;

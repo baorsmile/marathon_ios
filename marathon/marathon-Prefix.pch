@@ -19,4 +19,5 @@
     #import "PersistenceHelper.h"
     #import "AppDelegate.h"
     #import "AFHTTPRequestOperationManager.h"
+    #import "MMProgressHUD.h"
 #endif

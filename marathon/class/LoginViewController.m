@@ -16,6 +16,7 @@
 
 @implementation LoginViewController
 @synthesize codeField;
+@synthesize delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -59,8 +60,13 @@
 #pragma mark - Custom Method
 - (void)submit_click:(id)sender{
     NSString *code = codeField.text;
-    
     NSString *loginStr = kLoginURL(code);
+    
+    [[MMProgressHUD sharedHUD] setOverlayMode:MMProgressHUDWindowOverlayModeGradient];
+    [MMProgressHUD setDisplayStyle:MMProgressHUDDisplayStylePlain];
+    [MMProgressHUD setPresentationStyle:MMProgressHUDPresentationStyleExpand];
+    
+    [MMProgressHUD showWithTitle:nil status:@"登录中..."];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:loginStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -72,21 +78,24 @@
         
         NSDictionary *dataDic = [responseObject objectForKey:@"data"];
         if (dataDic && [dataDic count] > 0) {
-            // 登录成功
-            DMLog(@"登录成功");
+            [codeField resignFirstResponder];
+            [MMProgressHUD dismissWithSuccess:@"登录成功"];
+            if (delegate && [delegate respondsToSelector:@selector(loginSuccess)]) {
+                [delegate loginSuccess];
+            }
         }else{
-            // 登录失败
-            DMLog(@"登录失败");
+            [MMProgressHUD dismissWithError:@"登录失败"];
         }
 
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         // 网络连接失败
-        
+        [MMProgressHUD dismissWithError:@"网络出错"];
     }];
 }
 
 #pragma mark - UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
     [self submit_click:nil];
     return YES;
 }
