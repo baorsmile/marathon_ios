@@ -64,14 +64,23 @@
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:loginStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        if ([[responseObject objectForKey:@"result"] intValue] == 1) {
+        if (responseObject == nil || [[responseObject objectForKey:@"result"] intValue] == 0 ) {
+            // 操作错误
             
-        }else{
-            
+            return;
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        DMLog(@"Error: %@", error);
         
+        NSDictionary *dataDic = [responseObject objectForKey:@"data"];
+        if (dataDic && [dataDic count] > 0) {
+            // 登录成功
+            DMLog(@"登录成功");
+        }else{
+            // 登录失败
+            DMLog(@"登录失败");
+        }
+
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        // 网络连接失败
         
     }];
 }

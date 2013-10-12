@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		943FD94E180937BC00CDE52E /* MMHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 943FD93A180937BC00CDE52E /* MMHud.m */; };
+		943FD94F180937BC00CDE52E /* MMLinearProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 943FD93C180937BC00CDE52E /* MMLinearProgressView.m */; };
+		943FD950180937BC00CDE52E /* MMProgressHUD+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = 943FD93E180937BC00CDE52E /* MMProgressHUD+Animations.m */; };
+		943FD951180937BC00CDE52E /* MMProgressHUD+Class.m in Sources */ = {isa = PBXBuildFile; fileRef = 943FD93F180937BC00CDE52E /* MMProgressHUD+Class.m */; };
+		943FD952180937BC00CDE52E /* MMProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 943FD941180937BC00CDE52E /* MMProgressHUD.m */; };
+		943FD953180937BC00CDE52E /* MMProgressHUDOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 943FD944180937BC00CDE52E /* MMProgressHUDOverlayView.m */; };
+		943FD954180937BC00CDE52E /* MMProgressHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 943FD946180937BC00CDE52E /* MMProgressHUDViewController.m */; };
+		943FD955180937BC00CDE52E /* MMProgressHUDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 943FD948180937BC00CDE52E /* MMProgressHUDWindow.m */; };
+		943FD956180937BC00CDE52E /* MMRadialProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 943FD94B180937BC00CDE52E /* MMRadialProgressView.m */; };
+		943FD957180937BC00CDE52E /* MMVectorImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 943FD94D180937BC00CDE52E /* MMVectorImage.m */; };
 		945AD9491807E16600B09F43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945AD9481807E16600B09F43 /* Foundation.framework */; };
 		945AD94B1807E16600B09F43 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945AD94A1807E16600B09F43 /* CoreGraphics.framework */; };
 		945AD94D1807E16600B09F43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945AD94C1807E16600B09F43 /* UIKit.framework */; };
@@ -79,6 +89,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		943FD939180937BC00CDE52E /* MMHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHud.h; sourceTree = "<group>"; };
+		943FD93A180937BC00CDE52E /* MMHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHud.m; sourceTree = "<group>"; };
+		943FD93B180937BC00CDE52E /* MMLinearProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLinearProgressView.h; sourceTree = "<group>"; };
+		943FD93C180937BC00CDE52E /* MMLinearProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLinearProgressView.m; sourceTree = "<group>"; };
+		943FD93D180937BC00CDE52E /* MMProgressHUD+Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMProgressHUD+Animations.h"; sourceTree = "<group>"; };
+		943FD93E180937BC00CDE52E /* MMProgressHUD+Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MMProgressHUD+Animations.m"; sourceTree = "<group>"; };
+		943FD93F180937BC00CDE52E /* MMProgressHUD+Class.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MMProgressHUD+Class.m"; sourceTree = "<group>"; };
+		943FD940180937BC00CDE52E /* MMProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMProgressHUD.h; sourceTree = "<group>"; };
+		943FD941180937BC00CDE52E /* MMProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMProgressHUD.m; sourceTree = "<group>"; };
+		943FD942180937BC00CDE52E /* MMProgressHUDCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMProgressHUDCommon.h; sourceTree = "<group>"; };
+		943FD943180937BC00CDE52E /* MMProgressHUDOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMProgressHUDOverlayView.h; sourceTree = "<group>"; };
+		943FD944180937BC00CDE52E /* MMProgressHUDOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMProgressHUDOverlayView.m; sourceTree = "<group>"; };
+		943FD945180937BC00CDE52E /* MMProgressHUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMProgressHUDViewController.h; sourceTree = "<group>"; };
+		943FD946180937BC00CDE52E /* MMProgressHUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMProgressHUDViewController.m; sourceTree = "<group>"; };
+		943FD947180937BC00CDE52E /* MMProgressHUDWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMProgressHUDWindow.h; sourceTree = "<group>"; };
+		943FD948180937BC00CDE52E /* MMProgressHUDWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMProgressHUDWindow.m; sourceTree = "<group>"; };
+		943FD949180937BC00CDE52E /* MMProgressView-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMProgressView-Protocol.h"; sourceTree = "<group>"; };
+		943FD94A180937BC00CDE52E /* MMRadialProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMRadialProgressView.h; sourceTree = "<group>"; };
+		943FD94B180937BC00CDE52E /* MMRadialProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMRadialProgressView.m; sourceTree = "<group>"; };
+		943FD94C180937BC00CDE52E /* MMVectorImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMVectorImage.h; sourceTree = "<group>"; };
+		943FD94D180937BC00CDE52E /* MMVectorImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMVectorImage.m; sourceTree = "<group>"; };
 		945AD9451807E16600B09F43 /* marathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = marathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		945AD9481807E16600B09F43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		945AD94A1807E16600B09F43 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -224,6 +255,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		943FD938180937BC00CDE52E /* MMProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				943FD939180937BC00CDE52E /* MMHud.h */,
+				943FD93A180937BC00CDE52E /* MMHud.m */,
+				943FD93B180937BC00CDE52E /* MMLinearProgressView.h */,
+				943FD93C180937BC00CDE52E /* MMLinearProgressView.m */,
+				943FD93D180937BC00CDE52E /* MMProgressHUD+Animations.h */,
+				943FD93E180937BC00CDE52E /* MMProgressHUD+Animations.m */,
+				943FD93F180937BC00CDE52E /* MMProgressHUD+Class.m */,
+				943FD940180937BC00CDE52E /* MMProgressHUD.h */,
+				943FD941180937BC00CDE52E /* MMProgressHUD.m */,
+				943FD942180937BC00CDE52E /* MMProgressHUDCommon.h */,
+				943FD943180937BC00CDE52E /* MMProgressHUDOverlayView.h */,
+				943FD944180937BC00CDE52E /* MMProgressHUDOverlayView.m */,
+				943FD945180937BC00CDE52E /* MMProgressHUDViewController.h */,
+				943FD946180937BC00CDE52E /* MMProgressHUDViewController.m */,
+				943FD947180937BC00CDE52E /* MMProgressHUDWindow.h */,
+				943FD948180937BC00CDE52E /* MMProgressHUDWindow.m */,
+				943FD949180937BC00CDE52E /* MMProgressView-Protocol.h */,
+				943FD94A180937BC00CDE52E /* MMRadialProgressView.h */,
+				943FD94B180937BC00CDE52E /* MMRadialProgressView.m */,
+				943FD94C180937BC00CDE52E /* MMVectorImage.h */,
+				943FD94D180937BC00CDE52E /* MMVectorImage.m */,
+			);
+			path = MMProgressHUD;
+			sourceTree = "<group>";
+		};
 		945AD93C1807E16600B09F43 = {
 			isa = PBXGroup;
 			children = (
@@ -354,9 +413,10 @@
 			isa = PBXGroup;
 			children = (
 				945ADC731807F19800B09F43 /* AFNetworking */,
-				945ADC871807F19800B09F43 /* UIKit+AFNetworking */,
 				945AD9FA1807E99600B09F43 /* HJCacheClasses */,
+				943FD938180937BC00CDE52E /* MMProgressHUD */,
 				945ADA751807E99700B09F43 /* SBJson */,
+				945ADC871807F19800B09F43 /* UIKit+AFNetworking */,
 				945ADAC11807E99700B09F43 /* Weixin */,
 			);
 			path = lib;
@@ -581,12 +641,14 @@
 				945ADC9C1807F19800B09F43 /* AFURLConnectionOperation.m in Sources */,
 				945ADC971807F19800B09F43 /* AFHTTPRequestOperation.m in Sources */,
 				945ADBFF1807E99700B09F43 /* SBJsonWriter.m in Sources */,
+				943FD94F180937BC00CDE52E /* MMLinearProgressView.m in Sources */,
 				945AD9AC1807E4DD00B09F43 /* PersistenceHelper.m in Sources */,
 				945ADBC71807E99700B09F43 /* HJWeakMutableArray.m in Sources */,
 				945ADBFD1807E99700B09F43 /* SBJsonTokeniser.m in Sources */,
 				945ADBBF1807E99700B09F43 /* HJManagedImageV.m in Sources */,
 				945ADBC61807E99700B09F43 /* HJObjManager.m in Sources */,
 				945ADBFE1807E99700B09F43 /* SBJsonUTF8Stream.m in Sources */,
+				943FD953180937BC00CDE52E /* MMProgressHUDOverlayView.m in Sources */,
 				945AD9591807E16700B09F43 /* AppDelegate.m in Sources */,
 				945ADC9A1807F19800B09F43 /* AFNetworkReachabilityManager.m in Sources */,
 				945ADC9B1807F19800B09F43 /* AFSecurityPolicy.m in Sources */,
@@ -596,15 +658,20 @@
 				945ADBFA1807E99700B09F43 /* SBJsonStreamWriter.m in Sources */,
 				945ADBF51807E99700B09F43 /* SBJsonParser.m in Sources */,
 				945ADCA51807F19800B09F43 /* UIProgressView+AFNetworking.m in Sources */,
+				943FD950180937BC00CDE52E /* MMProgressHUD+Animations.m in Sources */,
 				945ADCA01807F19800B09F43 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				945ADBC21807E99700B09F43 /* HJMOFileCache.m in Sources */,
 				945ADCAE1807F3F100B09F43 /* NSString+MD5Addition.m in Sources */,
 				945AD9551807E16700B09F43 /* main.m in Sources */,
 				945ADC9E1807F19800B09F43 /* AFURLResponseSerialization.m in Sources */,
 				945ADC6E1807EC3800B09F43 /* Utility.m in Sources */,
+				943FD954180937BC00CDE52E /* MMProgressHUDViewController.m in Sources */,
+				943FD952180937BC00CDE52E /* MMProgressHUD.m in Sources */,
 				945ADCA41807F19800B09F43 /* UIImageView+AFNetworking.m in Sources */,
 				945ADBF81807E99700B09F43 /* SBJsonStreamParserAdapter.m in Sources */,
 				945ADCAF1807F3F100B09F43 /* NSString+stringValue.m in Sources */,
+				943FD951180937BC00CDE52E /* MMProgressHUD+Class.m in Sources */,
+				943FD957180937BC00CDE52E /* MMVectorImage.m in Sources */,
 				945ADC981807F19800B09F43 /* AFHTTPRequestOperationManager.m in Sources */,
 				945ADBC51807E99700B09F43 /* HJMOUserBase.m in Sources */,
 				945ADC9D1807F19800B09F43 /* AFURLRequestSerialization.m in Sources */,
@@ -617,12 +684,15 @@
 				945ADBF41807E99700B09F43 /* NSObject+SBJson.m in Sources */,
 				945ADC9F1807F19800B09F43 /* AFURLSessionManager.m in Sources */,
 				945ADC991807F19800B09F43 /* AFHTTPSessionManager.m in Sources */,
+				943FD955180937BC00CDE52E /* MMProgressHUDWindow.m in Sources */,
 				945ADBBD1807E99700B09F43 /* HJManagedCropImageV.m in Sources */,
 				945ADBF91807E99700B09F43 /* SBJsonStreamParserState.m in Sources */,
+				943FD956180937BC00CDE52E /* MMRadialProgressView.m in Sources */,
 				945ADCA21807F19800B09F43 /* UIAlertView+AFNetworking.m in Sources */,
 				945AD97B1807E19400B09F43 /* LoginViewController.m in Sources */,
 				945ADBBC1807E99700B09F43 /* HJCircularBuffer.m in Sources */,
 				945ADBFC1807E99700B09F43 /* SBJsonStreamWriterState.m in Sources */,
+				943FD94E180937BC00CDE52E /* MMHud.m in Sources */,
 				945ADBC11807E99700B09F43 /* HJMOBigFileCache.m in Sources */,
 				945ADCA11807F19800B09F43 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 			);
