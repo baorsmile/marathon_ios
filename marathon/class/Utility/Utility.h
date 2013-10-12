@@ -45,9 +45,7 @@ char indexTitleOfString(unsigned short string);
 
 + (NSString *)descriptionForDateInterval:(NSString *)dateString;
 + (NSString *)desForDateInterval2:(NSString *)dateString;
-+ (void)chageStandardFile:(NSString *)srcPath toAppleFile:(NSString *)desPath;
 
-+ (NSString*)getRecordFilename:(NSString*)urlString;
 + (BOOL)isValidLatLon:(double)lat Lon:(double)lon;
 + (NSString*)getPhotoDownloadURL:(NSString*)currentURLString sizeType:(NSString*)sizetype;
 

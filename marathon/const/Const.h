@@ -10,7 +10,7 @@
 ////*******************************************
 ////*******************************************
 ////调试开关 //For test Only    Release版本一定要关闭本开关，切记切记！！！！！！！！！！！！！！      
-//#define DEBUG_LEHE
+#define DEBUG_LEHE
 #define DEBUG_LOG
 ////*******************************************//
 ////*******************************************//
@@ -48,7 +48,7 @@
 
 //api url
 #ifdef DEBUG_LEHE
-    #define apiHost             @"http://127.0.0.1:8080/marathon/api_call.php?"   //For test Only
+    #define apiHost             @"http://192.168.1.113:8080/marathon/api_call.php?"   //For test Only
 #else
     #define apiHost             @"http://wanyou.lehe.com/api2/api_call.php?"
 #endif
@@ -122,9 +122,7 @@
 
 #define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
 
-//获取全局基本参数
-//#define kClientVersion                      @"2.0"
-#define kVia                                @"iphone"
+#pragma mark - 获取全局基本参数
 #define kUUid \
 [(AppDelegate *)[[UIApplication sharedApplication] delegate] gUuid]
 
@@ -139,11 +137,10 @@
 
 #define kAppDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
-//全局参数宏定义
+#pragma mark - 全局参数宏定义
 #define KRANDOM(x) (rand()%x)
 
 #define HEI_(xx) [UIFont boldSystemFontOfSize:xx]
-
 
 #define PLACEHOLDER_COLOR	RGBCOLOR(150, 150, 150)
 //基础页面的背景色值
@@ -179,8 +176,13 @@ typedef enum kUPLOAD_TYPE {
 #define kGroupCenterRefreshNotification         @"GroupCenterRefreshNotification"
 #define kFriendCenterRefreshNotification        @"FriendCenterRefreshNotification"
 
-//PersistenceHelper
+#pragma mark - PersistenceHelper
 #define INVITECODE                             @"invite_code"
+
+
+#pragma mark - 拼接网络请求串
+#define kLoginURL(xx_code) \
+[NSString stringWithFormat:@"%@&m=login&code=%@",apiHost,xx_code]
 
 
 //基础URL

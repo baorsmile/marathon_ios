@@ -108,6 +108,7 @@
  - `application/json`
  - `text/json`
  - `text/javascript`
+ - `text/html`  added by Ryan
  */
 @interface AFJSONResponseSerializer : AFHTTPResponseSerializer
 

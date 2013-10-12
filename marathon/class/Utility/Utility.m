@@ -869,55 +869,6 @@ char indexTitleOfString(unsigned short string) {
 }
 
 
-+ (void)chageStandardFile:(NSString *)srcPath toAppleFile:(NSString *)desPath {
-    
-    NSMutableData *appleIlbcHeaderData = [NSMutableData dataWithContentsOfFile:HEADER_FILEPATH];
-    
-    NSMutableData *appleILBC = [NSMutableData data];
-    //添加头
-    [appleILBC appendData:appleIlbcHeaderData];
-    
-    //添加body,用于计算音频数据段长度
-    NSData *bodyData = [NSData dataWithContentsOfFile:srcPath];
-    
-    //添加长度
-    int length = 0;
-    length = 1 + [bodyData length];
-    length = ntohl(length);
-    [appleILBC appendBytes:&length length:4];
-    
-    //添加flag
-    int flagBytes = 1;
-    flagBytes = ntohl(flagBytes);
-    [appleILBC appendBytes:&flagBytes length:4];
-    
-    //添加body
-    [appleILBC appendData:bodyData];
-    
-    [appleILBC writeToFile:desPath atomically:NO];
-}
-
-+ (NSString*)getRecordFilename:(NSString*)urlString {
-
-	if ([urlString hasSuffix:@".ilbc"])
-	{
-		NSString* filename = [urlString stringByReplacingOccurrencesOfString:@"\\" withString:@"/"];
-		NSInteger find = 0;
-		while (YES) {
-			find = ([filename rangeOfString:@"/"]).location;
-			if(find != NSNotFound)
-				filename = [filename substringFromIndex:(find+1)];
-			else
-				break;
-		}
-		return filename;
-	}
-	else {
-		return @"";
-	}
-
-}
-
 + (BOOL)isValidLatLon:(double)lat Lon:(double)lon {
 
 	if (lat>-90.0f && lat<90.0f && lon>-180.0f && lon<180.0f && lat!=0.0f && lon!=0.0f) {

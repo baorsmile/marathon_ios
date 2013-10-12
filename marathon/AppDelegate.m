@@ -21,7 +21,13 @@
     self.rootVC = [[RootViewController alloc] init];
     self.window.rootViewController = rootVC;
     
-    NSString *code = [PersistenceHelper dataForKey:@""];
+    NSString *code = [PersistenceHelper dataForKey:INVITECODE];
+    if (code && [code length] > 0) {
+        DMLog(@"自动登录成功");
+    }else{
+        self.loginVC = [[LoginViewController alloc] init];
+        [self.window addSubview:loginVC.view];
+    }
     
     return YES;
 }
