@@ -37,6 +37,8 @@
 		944E0B89180B9AE200E0649B /* friends@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B75180B9AE200E0649B /* friends@2.png */; };
 		944E0B8A180B9AE200E0649B /* reminder.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B76180B9AE200E0649B /* reminder.png */; };
 		944E0B8B180B9AE200E0649B /* reminder@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B77180B9AE200E0649B /* reminder@2.png */; };
+		944E0B8D180BA45300E0649B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944E0B8C180BA45300E0649B /* MapKit.framework */; };
+		944E0B8F180BA4B800E0649B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944E0B8E180BA4B800E0649B /* CoreLocation.framework */; };
 		945AD9491807E16600B09F43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945AD9481807E16600B09F43 /* Foundation.framework */; };
 		945AD94B1807E16600B09F43 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945AD94A1807E16600B09F43 /* CoreGraphics.framework */; };
 		945AD94D1807E16600B09F43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945AD94C1807E16600B09F43 /* UIKit.framework */; };
@@ -74,8 +76,6 @@
 		945ADBFD1807E99700B09F43 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA8B1807E99700B09F43 /* SBJsonTokeniser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		945ADBFE1807E99700B09F43 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA8D1807E99700B09F43 /* SBJsonUTF8Stream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		945ADBFF1807E99700B09F43 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA8F1807E99700B09F43 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		945ADC131807E99700B09F43 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 945ADAC21807E99700B09F43 /* libWeChatSDK.a */; };
-		945ADC141807E99700B09F43 /* libWeChatSDK_armv7_armv7s.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 945ADAC31807E99700B09F43 /* libWeChatSDK_armv7_armv7s.a */; };
 		945ADC6E1807EC3800B09F43 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADC6D1807EC3800B09F43 /* Utility.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		945ADC971807F19800B09F43 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADC751807F19800B09F43 /* AFHTTPRequestOperation.m */; };
 		945ADC981807F19800B09F43 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADC771807F19800B09F43 /* AFHTTPRequestOperationManager.m */; };
@@ -150,6 +150,8 @@
 		944E0B75180B9AE200E0649B /* friends@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friends@2.png"; sourceTree = "<group>"; };
 		944E0B76180B9AE200E0649B /* reminder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reminder.png; sourceTree = "<group>"; };
 		944E0B77180B9AE200E0649B /* reminder@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reminder@2.png"; sourceTree = "<group>"; };
+		944E0B8C180BA45300E0649B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		944E0B8E180BA4B800E0649B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		945AD9451807E16600B09F43 /* marathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = marathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		945AD9481807E16600B09F43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		945AD94A1807E16600B09F43 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -221,10 +223,6 @@
 		945ADA8D1807E99700B09F43 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		945ADA8E1807E99700B09F43 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		945ADA8F1807E99700B09F43 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		945ADAC21807E99700B09F43 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
-		945ADAC31807E99700B09F43 /* libWeChatSDK_armv7_armv7s.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK_armv7_armv7s.a; sourceTree = "<group>"; };
-		945ADAC41807E99700B09F43 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
-		945ADAC51807E99700B09F43 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		945ADC6C1807EC3800B09F43 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		945ADC6D1807EC3800B09F43 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		945ADC741807F19800B09F43 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -274,11 +272,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				944E0B8F180BA4B800E0649B /* CoreLocation.framework in Frameworks */,
+				944E0B8D180BA45300E0649B /* MapKit.framework in Frameworks */,
 				945AD94B1807E16600B09F43 /* CoreGraphics.framework in Frameworks */,
 				945AD94D1807E16600B09F43 /* UIKit.framework in Frameworks */,
 				945AD9491807E16600B09F43 /* Foundation.framework in Frameworks */,
-				945ADC141807E99700B09F43 /* libWeChatSDK_armv7_armv7s.a in Frameworks */,
-				945ADC131807E99700B09F43 /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +343,8 @@
 		945AD9471807E16600B09F43 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				944E0B8E180BA4B800E0649B /* CoreLocation.framework */,
+				944E0B8C180BA45300E0649B /* MapKit.framework */,
 				945AD9481807E16600B09F43 /* Foundation.framework */,
 				945AD94A1807E16600B09F43 /* CoreGraphics.framework */,
 				945AD94C1807E16600B09F43 /* UIKit.framework */,
@@ -477,7 +477,6 @@
 				943FD938180937BC00CDE52E /* MMProgressHUD */,
 				945ADA751807E99700B09F43 /* SBJson */,
 				945ADC871807F19800B09F43 /* UIKit+AFNetworking */,
-				945ADAC11807E99700B09F43 /* Weixin */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -542,17 +541,6 @@
 				945ADA8F1807E99700B09F43 /* SBJsonWriter.m */,
 			);
 			path = SBJson;
-			sourceTree = "<group>";
-		};
-		945ADAC11807E99700B09F43 /* Weixin */ = {
-			isa = PBXGroup;
-			children = (
-				945ADAC21807E99700B09F43 /* libWeChatSDK.a */,
-				945ADAC31807E99700B09F43 /* libWeChatSDK_armv7_armv7s.a */,
-				945ADAC41807E99700B09F43 /* WXApi.h */,
-				945ADAC51807E99700B09F43 /* WXApiObject.h */,
-			);
-			path = Weixin;
 			sourceTree = "<group>";
 		};
 		945ADC731807F19800B09F43 /* AFNetworking */ = {

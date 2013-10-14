@@ -29,6 +29,8 @@
 	// Do any additional setup after loading the view.
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(requestLocation) name:kLoginSuccessNotification object:nil];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
