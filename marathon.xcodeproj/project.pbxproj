@@ -17,6 +17,26 @@
 		943FD955180937BC00CDE52E /* MMProgressHUDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 943FD948180937BC00CDE52E /* MMProgressHUDWindow.m */; };
 		943FD956180937BC00CDE52E /* MMRadialProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 943FD94B180937BC00CDE52E /* MMRadialProgressView.m */; };
 		943FD957180937BC00CDE52E /* MMVectorImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 943FD94D180937BC00CDE52E /* MMVectorImage.m */; };
+		944E0B78180B9AE200E0649B /* AVATAS.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B64180B9AE200E0649B /* AVATAS.png */; };
+		944E0B79180B9AE200E0649B /* AVATAS@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B65180B9AE200E0649B /* AVATAS@2.png */; };
+		944E0B7A180B9AE200E0649B /* AVATAS1.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B66180B9AE200E0649B /* AVATAS1.png */; };
+		944E0B7B180B9AE200E0649B /* AVATAS1@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B67180B9AE200E0649B /* AVATAS1@2.png */; };
+		944E0B7C180B9AE200E0649B /* AVATAS2.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B68180B9AE200E0649B /* AVATAS2.png */; };
+		944E0B7D180B9AE200E0649B /* AVATAS2@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B69180B9AE200E0649B /* AVATAS2@2.png */; };
+		944E0B7E180B9AE200E0649B /* AVATAS3.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B6A180B9AE200E0649B /* AVATAS3.png */; };
+		944E0B7F180B9AE200E0649B /* AVATAS3@.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B6B180B9AE200E0649B /* AVATAS3@.png */; };
+		944E0B80180B9AE200E0649B /* AVATAS3@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B6C180B9AE200E0649B /* AVATAS3@2.png */; };
+		944E0B81180B9AE200E0649B /* AVATAS4.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B6D180B9AE200E0649B /* AVATAS4.png */; };
+		944E0B82180B9AE200E0649B /* AVATAS4@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B6E180B9AE200E0649B /* AVATAS4@2.png */; };
+		944E0B83180B9AE200E0649B /* AVATAS5.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B6F180B9AE200E0649B /* AVATAS5.png */; };
+		944E0B84180B9AE200E0649B /* AVATAS5@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B70180B9AE200E0649B /* AVATAS5@2.png */; };
+		944E0B85180B9AE200E0649B /* AVATAS6.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B71180B9AE200E0649B /* AVATAS6.png */; };
+		944E0B86180B9AE200E0649B /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B72180B9AE200E0649B /* button.png */; };
+		944E0B87180B9AE200E0649B /* button@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B73180B9AE200E0649B /* button@2.png */; };
+		944E0B88180B9AE200E0649B /* friends.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B74180B9AE200E0649B /* friends.png */; };
+		944E0B89180B9AE200E0649B /* friends@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B75180B9AE200E0649B /* friends@2.png */; };
+		944E0B8A180B9AE200E0649B /* reminder.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B76180B9AE200E0649B /* reminder.png */; };
+		944E0B8B180B9AE200E0649B /* reminder@2.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B77180B9AE200E0649B /* reminder@2.png */; };
 		945AD9491807E16600B09F43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945AD9481807E16600B09F43 /* Foundation.framework */; };
 		945AD94B1807E16600B09F43 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945AD94A1807E16600B09F43 /* CoreGraphics.framework */; };
 		945AD94D1807E16600B09F43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945AD94C1807E16600B09F43 /* UIKit.framework */; };
@@ -110,6 +130,26 @@
 		943FD94B180937BC00CDE52E /* MMRadialProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMRadialProgressView.m; sourceTree = "<group>"; };
 		943FD94C180937BC00CDE52E /* MMVectorImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMVectorImage.h; sourceTree = "<group>"; };
 		943FD94D180937BC00CDE52E /* MMVectorImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMVectorImage.m; sourceTree = "<group>"; };
+		944E0B64180B9AE200E0649B /* AVATAS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AVATAS.png; sourceTree = "<group>"; };
+		944E0B65180B9AE200E0649B /* AVATAS@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AVATAS@2.png"; sourceTree = "<group>"; };
+		944E0B66180B9AE200E0649B /* AVATAS1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AVATAS1.png; sourceTree = "<group>"; };
+		944E0B67180B9AE200E0649B /* AVATAS1@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AVATAS1@2.png"; sourceTree = "<group>"; };
+		944E0B68180B9AE200E0649B /* AVATAS2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AVATAS2.png; sourceTree = "<group>"; };
+		944E0B69180B9AE200E0649B /* AVATAS2@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AVATAS2@2.png"; sourceTree = "<group>"; };
+		944E0B6A180B9AE200E0649B /* AVATAS3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AVATAS3.png; sourceTree = "<group>"; };
+		944E0B6B180B9AE200E0649B /* AVATAS3@.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AVATAS3@.png"; sourceTree = "<group>"; };
+		944E0B6C180B9AE200E0649B /* AVATAS3@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AVATAS3@2.png"; sourceTree = "<group>"; };
+		944E0B6D180B9AE200E0649B /* AVATAS4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AVATAS4.png; sourceTree = "<group>"; };
+		944E0B6E180B9AE200E0649B /* AVATAS4@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AVATAS4@2.png"; sourceTree = "<group>"; };
+		944E0B6F180B9AE200E0649B /* AVATAS5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AVATAS5.png; sourceTree = "<group>"; };
+		944E0B70180B9AE200E0649B /* AVATAS5@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AVATAS5@2.png"; sourceTree = "<group>"; };
+		944E0B71180B9AE200E0649B /* AVATAS6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AVATAS6.png; sourceTree = "<group>"; };
+		944E0B72180B9AE200E0649B /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		944E0B73180B9AE200E0649B /* button@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button@2.png"; sourceTree = "<group>"; };
+		944E0B74180B9AE200E0649B /* friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friends.png; sourceTree = "<group>"; };
+		944E0B75180B9AE200E0649B /* friends@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friends@2.png"; sourceTree = "<group>"; };
+		944E0B76180B9AE200E0649B /* reminder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reminder.png; sourceTree = "<group>"; };
+		944E0B77180B9AE200E0649B /* reminder@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reminder@2.png"; sourceTree = "<group>"; };
 		945AD9451807E16600B09F43 /* marathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = marathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		945AD9481807E16600B09F43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		945AD94A1807E16600B09F43 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -373,6 +413,26 @@
 		945AD9781807E18500B09F43 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				944E0B64180B9AE200E0649B /* AVATAS.png */,
+				944E0B65180B9AE200E0649B /* AVATAS@2.png */,
+				944E0B66180B9AE200E0649B /* AVATAS1.png */,
+				944E0B67180B9AE200E0649B /* AVATAS1@2.png */,
+				944E0B68180B9AE200E0649B /* AVATAS2.png */,
+				944E0B69180B9AE200E0649B /* AVATAS2@2.png */,
+				944E0B6A180B9AE200E0649B /* AVATAS3.png */,
+				944E0B6B180B9AE200E0649B /* AVATAS3@.png */,
+				944E0B6C180B9AE200E0649B /* AVATAS3@2.png */,
+				944E0B6D180B9AE200E0649B /* AVATAS4.png */,
+				944E0B6E180B9AE200E0649B /* AVATAS4@2.png */,
+				944E0B6F180B9AE200E0649B /* AVATAS5.png */,
+				944E0B70180B9AE200E0649B /* AVATAS5@2.png */,
+				944E0B71180B9AE200E0649B /* AVATAS6.png */,
+				944E0B72180B9AE200E0649B /* button.png */,
+				944E0B73180B9AE200E0649B /* button@2.png */,
+				944E0B74180B9AE200E0649B /* friends.png */,
+				944E0B75180B9AE200E0649B /* friends@2.png */,
+				944E0B76180B9AE200E0649B /* reminder.png */,
+				944E0B77180B9AE200E0649B /* reminder@2.png */,
 			);
 			path = image;
 			sourceTree = "<group>";
@@ -618,8 +678,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				944E0B78180B9AE200E0649B /* AVATAS.png in Resources */,
+				944E0B82180B9AE200E0649B /* AVATAS4@2.png in Resources */,
+				944E0B7C180B9AE200E0649B /* AVATAS2.png in Resources */,
+				944E0B88180B9AE200E0649B /* friends.png in Resources */,
+				944E0B87180B9AE200E0649B /* button@2.png in Resources */,
+				944E0B89180B9AE200E0649B /* friends@2.png in Resources */,
+				944E0B84180B9AE200E0649B /* AVATAS5@2.png in Resources */,
+				944E0B85180B9AE200E0649B /* AVATAS6.png in Resources */,
+				944E0B83180B9AE200E0649B /* AVATAS5.png in Resources */,
+				944E0B81180B9AE200E0649B /* AVATAS4.png in Resources */,
+				944E0B86180B9AE200E0649B /* button.png in Resources */,
+				944E0B8A180B9AE200E0649B /* reminder.png in Resources */,
+				944E0B7F180B9AE200E0649B /* AVATAS3@.png in Resources */,
+				944E0B79180B9AE200E0649B /* AVATAS@2.png in Resources */,
+				944E0B7A180B9AE200E0649B /* AVATAS1.png in Resources */,
+				944E0B7D180B9AE200E0649B /* AVATAS2@2.png in Resources */,
+				944E0B80180B9AE200E0649B /* AVATAS3@2.png in Resources */,
+				944E0B7B180B9AE200E0649B /* AVATAS1@2.png in Resources */,
 				945AD9531807E16700B09F43 /* InfoPlist.strings in Resources */,
 				945AD9B31807E70100B09F43 /* Images.xcassets in Resources */,
+				944E0B7E180B9AE200E0649B /* AVATAS3.png in Resources */,
+				944E0B8B180B9AE200E0649B /* reminder@2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -41,7 +41,7 @@
 
 //api url
 #ifdef DEBUG_LEHE
-    #define apiHost             @"http://192.168.1.113:8080/marathon/api_call.php?"   //For test Only
+    #define apiHost             @"http://192.168.3.22:8080/marathon/api_call.php?"   //For test Only
 #else
     #define apiHost             @"http://wanyou.lehe.com/api2/api_call.php?"
 #endif
