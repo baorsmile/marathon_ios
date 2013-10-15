@@ -16,6 +16,7 @@
 @property (nonatomic, strong) MKMapView *mapView;
 @property (nonatomic, strong) AddShift *addShift;
 @property (nonatomic, strong) RUserLocation *myLocation;
+@property (nonatomic, strong) NSTimer *getLocationTimer;
 
 @end
 
@@ -24,6 +25,7 @@
 @synthesize mapView;
 @synthesize addShift;
 @synthesize myLocation;
+@synthesize getLocationTimer;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -106,9 +108,7 @@
 }
 
 - (void)friends_click:(id)sender{
-    if (!isDownload) {
-        [self requestAllLocation];
-    }
+    [self stopUpdateLocation];
 }
 
 - (void)start_click:(id)sender{
@@ -140,12 +140,20 @@
         if([CLLocationManager locationServicesEnabled])
         {
             [self.locationManager startUpdatingLocation];
+            if (self.getLocationTimer == nil) {
+                [self performSelector:@selector(requestAllLocation) withObject:nil];
+                self.getLocationTimer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(requestAllLocation) userInfo:nil repeats:YES];
+            }
         }
     }
     else if ([CLLocationManager instancesRespondToSelector:@selector(locationServicesEnabled)]) {
         
         if ([self.locationManager performSelector:@selector(locationServicesEnabled)]) {
             [self.locationManager startUpdatingLocation];
+            if (self.getLocationTimer == nil) {
+                [self performSelector:@selector(requestAllLocation) withObject:nil];
+                self.getLocationTimer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(requestAllLocation) userInfo:nil repeats:YES];
+            }
         }
     }
 }
@@ -156,12 +164,20 @@
         if([CLLocationManager locationServicesEnabled])
         {
             [self.locationManager stopUpdatingLocation];
+            if (self.getLocationTimer) {
+                [getLocationTimer invalidate];
+                self.getLocationTimer = nil;
+            }
         }
     }
     else if ([CLLocationManager instancesRespondToSelector:@selector(locationServicesEnabled)]){
         
         if ([self.locationManager performSelector:@selector(locationServicesEnabled)]) {
             [self.locationManager stopUpdatingLocation];
+            if (self.getLocationTimer) {
+                [getLocationTimer invalidate];
+                self.getLocationTimer = nil;
+            }
         }
     }
 }
@@ -193,6 +209,10 @@
 }
 
 - (void)requestAllLocation{
+    if (isDownload) {
+        return;
+    }
+    
     isDownload = YES;
     
     NSString *locationStr = kGetLocation;
@@ -209,7 +229,7 @@
         
         NSArray *dataArray = [responseObject objectForKey:@"data"];
         if (dataArray && [dataArray count] > 0) {
-            [self addPlayerAnnotation:dataArray];
+            [self addPlayerAnnotations:dataArray];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         // 网络连接失败
@@ -243,20 +263,30 @@
     [mapView addAnnotation:myLocation];
 }
 
-- (void)addPlayerAnnotation:(NSArray *)playerArray{
+- (void)addPlayerAnnotations:(NSArray *)playerArray{
+    [self removePlayerAnnotations];
     for (NSDictionary *item in playerArray) {
         if ([[item objectForKey:@"invite_code"] isEqualToString:kCode]) {
             continue;
         }else{
+            GPoint realLatLon = {[[item objectForKey:@"lat"] doubleValue], [[item objectForKey:@"lon"] doubleValue]};
+            GPoint fakeLatLon = [addShift realToFake:realLatLon];
+            CLLocationCoordinate2D fakeCoordinate = CLLocationCoordinate2DMake(fakeLatLon.lat, fakeLatLon.lon);
+            RUserLocation *playLocation = [[RUserLocation alloc] init];
+            playLocation.coordinate = fakeCoordinate;
+            playLocation.userInfo = item;
             
+            [mapView addAnnotation:playLocation];
         }
     }
 }
 
-- (void)removePlayerAnnotation {
+- (void)removePlayerAnnotations {
     NSMutableArray *delArray = [NSMutableArray array];
     for (id annotation in [mapView annotations]) {
-        if ([annotation isKindOfClass:[MKUserLocation class]]) {
+        if (annotation == myLocation) {
+            continue;
+        }else{
             [delArray addObject:annotation];
         }
     }
@@ -311,6 +341,14 @@
         annotationView.frame = CGRectMake(0, 0, 36, 48);
         annotationView.backgroundColor = [UIColor clearColor];
         NSString *code = [myLocation.userInfo objectForKey:@"invite_code"];
+        annotationView.image = [UIImage imageNamed:[self getAvatarName:code]];
+        annotationView.centerOffset = CGPointMake(0, -24);
+        return annotationView;
+    }else{
+        MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"playLocation"];
+        annotationView.frame = CGRectMake(0, 0, 36, 48);
+        annotationView.backgroundColor = [UIColor clearColor];
+        NSString *code = [((RUserLocation*)annotation).userInfo objectForKey:@"invite_code"];
         annotationView.image = [UIImage imageNamed:[self getAvatarName:code]];
         annotationView.centerOffset = CGPointMake(0, -24);
         return annotationView;

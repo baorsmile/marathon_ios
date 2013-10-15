@@ -85,6 +85,7 @@
             }
             
             [PersistenceHelper setData:code forKey:INVITECODE];
+            kAppDelegate.code = code;
         }else{
             [MMProgressHUD dismissWithError:@"登录失败"];
         }

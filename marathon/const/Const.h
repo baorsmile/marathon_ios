@@ -10,7 +10,7 @@
 ////*******************************************
 ////*******************************************
 ////调试开关 //For test Only    Release版本一定要关闭本开关，切记切记！！！！！！！！！！！！！！      
-#define DEBUG_LEHE
+//#define DEBUG_LEHE
 #define DEBUG_LOG
 ////*******************************************//
 ////*******************************************//
@@ -43,7 +43,7 @@
 #ifdef DEBUG_LEHE
     #define apiHost             @"http://192.168.3.22:8080/marathon/api_call.php?"   //For test Only
 #else
-    #define apiHost             @"http://wanyou.lehe.com/api2/api_call.php?"
+    #define apiHost             @"http://www.hkebuyer.com/marathon/api_call.php?"
 #endif
 
 //本地cookies nsdictionary
