@@ -7,11 +7,13 @@
 //
 
 #import "RootViewController.h"
+#import "Addshift.h"
 
 @interface RootViewController ()
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) MKMapView *mapView;
+@property (nonatomic, strong) AddShift *addShift;
 
 @end
 
@@ -34,6 +36,8 @@
 	// Do any additional setup after loading the view.
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(requestLocation) name:kLoginSuccessNotification object:nil];
+    
+    self.addShift = [[AddShift alloc] init];
     
     self.locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
