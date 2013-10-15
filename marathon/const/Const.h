@@ -102,17 +102,8 @@
 #define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
 
 #pragma mark - 获取全局基本参数
-#define kUUid \
-[(AppDelegate *)[[UIApplication sharedApplication] delegate] gUuid]
-
-#define kUDID \
-[(AppDelegate *)[[UIApplication sharedApplication] delegate] gUdid]
-
-#define kToken \
-[(AppDelegate *)[[UIApplication sharedApplication] delegate] gToken]
-
-#define kAccountID \
-[(AppDelegate *)[[UIApplication sharedApplication] delegate] gMyAccountID]
+#define kCode \
+[(AppDelegate *)[[UIApplication sharedApplication] delegate] code]
 
 #define kAppDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
@@ -160,14 +151,16 @@ typedef enum kUPLOAD_TYPE {
 #define kLoginURL(xx_code) \
 [NSString stringWithFormat:@"%@&m=login&code=%@",apiHost,xx_code]
 
+#define kUpLoadLocation(xx_lat,xx_lon) \
+[NSString stringWithFormat:@"%@&m=upload_location&code=%@&lat=%f&lon=%f",apiHost,kCode,xx_lat,xx_lon]
+
+#define kGetLocation \
+[NSString stringWithFormat:@"%@&m=getlocation",apiHost]
 
 //基础URL
 #define kBaseURL \
 [NSString stringWithFormat:@"%@uuid=%@&via=%@&cver=%@&version=%@&app=%@&pid=%@&sdk=%@&token=%@",apiHost,kUDID,kVia,kClientVersion,kServerVersion,kApp,kPid,kBuildForSDK,kToken]
 
-//附加签名串
-#define AddRequestSign(xx_request) \
-[NSString stringWithFormat:@"%@&s11=%@", xx_request,[Utility generateRequestSign:xx_request partnerKey:@"zcbmLJGDAqetuoWRYIP"]]
 
 //获取 论坛列表/帖子详情
 #define GetForumTable(xx_appid,xx_pkg_name,xx_pkg_version,xx_qtype,xx_hid,xx_page,xx_pagesize) \

@@ -40,7 +40,6 @@ typedef struct
 
 
 - (id)init;
-- (void)dealloc;
 - (void)initVals;
 - (int)isValidRange:(GPoint)loc;
 - (BOOL)isValidRange:(double)lat withLon:(double)lon;

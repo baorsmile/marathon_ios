@@ -36,6 +36,7 @@
 		944E0BAE180CE7D900E0649B /* reminder.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B9E180CE7D900E0649B /* reminder.png */; };
 		944E0BAF180CE7D900E0649B /* reminder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 944E0B9F180CE7D900E0649B /* reminder@2x.png */; };
 		944E0BB5180CEC4C00E0649B /* Addshift.m in Sources */ = {isa = PBXBuildFile; fileRef = 944E0BB4180CEC4C00E0649B /* Addshift.m */; };
+		944E0BB8180D37B200E0649B /* RUserLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 944E0BB7180D37B200E0649B /* RUserLocation.m */; };
 		945AD9491807E16600B09F43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945AD9481807E16600B09F43 /* Foundation.framework */; };
 		945AD94B1807E16600B09F43 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945AD94A1807E16600B09F43 /* CoreGraphics.framework */; };
 		945AD94D1807E16600B09F43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945AD94C1807E16600B09F43 /* UIKit.framework */; };
@@ -147,6 +148,8 @@
 		944E0B9F180CE7D900E0649B /* reminder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reminder@2x.png"; sourceTree = "<group>"; };
 		944E0BB3180CEC4C00E0649B /* Addshift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Addshift.h; sourceTree = "<group>"; };
 		944E0BB4180CEC4C00E0649B /* Addshift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Addshift.m; sourceTree = "<group>"; };
+		944E0BB6180D37B200E0649B /* RUserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUserLocation.h; sourceTree = "<group>"; };
+		944E0BB7180D37B200E0649B /* RUserLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RUserLocation.m; sourceTree = "<group>"; };
 		945AD9451807E16600B09F43 /* marathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = marathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		945AD9481807E16600B09F43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		945AD94A1807E16600B09F43 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -401,6 +404,8 @@
 				945AD97A1807E19400B09F43 /* LoginViewController.m */,
 				945AD97C1807E1A200B09F43 /* RootViewController.h */,
 				945AD97D1807E1A200B09F43 /* RootViewController.m */,
+				944E0BB6180D37B200E0649B /* RUserLocation.h */,
+				944E0BB7180D37B200E0649B /* RUserLocation.m */,
 			);
 			path = class;
 			sourceTree = "<group>";
@@ -705,6 +710,7 @@
 				945ADBFD1807E99700B09F43 /* SBJsonTokeniser.m in Sources */,
 				945ADBBF1807E99700B09F43 /* HJManagedImageV.m in Sources */,
 				945ADBC61807E99700B09F43 /* HJObjManager.m in Sources */,
+				944E0BB8180D37B200E0649B /* RUserLocation.m in Sources */,
 				945ADBFE1807E99700B09F43 /* SBJsonUTF8Stream.m in Sources */,
 				943FD953180937BC00CDE52E /* MMProgressHUDOverlayView.m in Sources */,
 				945AD9591807E16700B09F43 /* AppDelegate.m in Sources */,

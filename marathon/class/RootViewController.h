@@ -10,6 +10,9 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface RootViewController : UIViewController<MKMapViewDelegate, CLLocationManagerDelegate>
+@interface RootViewController : UIViewController<MKMapViewDelegate, CLLocationManagerDelegate>{
+    BOOL isUpload;
+    BOOL isDownload;
+}
 
 @end

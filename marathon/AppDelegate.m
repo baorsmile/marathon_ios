@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 
 @implementation AppDelegate
-@synthesize rootVC,loginVC;
+@synthesize rootVC,loginVC,code;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -21,7 +21,7 @@
     self.rootVC = [[RootViewController alloc] init];
     self.window.rootViewController = rootVC;
     
-    NSString *code = [PersistenceHelper dataForKey:INVITECODE];
+    self.code = [PersistenceHelper dataForKey:INVITECODE];
     if (code && [code length] > 0) {
         DMLog(@"自动登录成功");
     }else{

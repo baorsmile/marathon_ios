@@ -16,5 +16,7 @@
 @property (nonatomic, strong) RootViewController *rootVC;
 @property (nonatomic, strong) LoginViewController *loginVC;
 
+@property (nonatomic, strong) NSString *code;
+
 
 @end

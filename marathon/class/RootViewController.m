@@ -8,18 +8,22 @@
 
 #import "RootViewController.h"
 #import "Addshift.h"
+#import "RUserLocation.h"
 
 @interface RootViewController ()
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) MKMapView *mapView;
 @property (nonatomic, strong) AddShift *addShift;
+@property (nonatomic, strong) RUserLocation *myLocation;
 
 @end
 
 @implementation RootViewController
 @synthesize locationManager;
 @synthesize mapView;
+@synthesize addShift;
+@synthesize myLocation;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,6 +38,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    isUpload = NO;
+    isDownload = NO;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(requestLocation) name:kLoginSuccessNotification object:nil];
     
@@ -99,27 +106,161 @@
 }
 
 - (void)friends_click:(id)sender{
-    
+    if (!isDownload) {
+        [self requestAllLocation];
+    }
 }
 
 - (void)start_click:(id)sender{
-    [self.locationManager startUpdatingLocation];
+    [self startUpdateLocation];
+}
+
+- (NSString *)getAvatarName:(NSString *)code{
+    NSString *resultName;
+    
+    if ([code isEqualToString:@"123456"]) {
+        resultName = @"AVATAS1";
+    }else if ([code isEqualToString:@"12345"]){
+        resultName = @"AVATAS2";
+    }else if ([code isEqualToString:@"1234"]){
+        resultName = @"AVATAS3";
+    }else if ([code isEqualToString:@"123"]){
+        resultName = @"AVATAS4";
+    }else if ([code isEqualToString:@"12"]){
+        resultName = @"AVATAS5";
+    }
+    
+    return resultName;
+}
+
+- (void)startUpdateLocation
+{
+    if ([CLLocationManager respondsToSelector:@selector(locationServicesEnabled)]) {
+        
+        if([CLLocationManager locationServicesEnabled])
+        {
+            [self.locationManager startUpdatingLocation];
+        }
+    }
+    else if ([CLLocationManager instancesRespondToSelector:@selector(locationServicesEnabled)]) {
+        
+        if ([self.locationManager performSelector:@selector(locationServicesEnabled)]) {
+            [self.locationManager startUpdatingLocation];
+        }
+    }
+}
+
+- (void)stopUpdateLocation
+{
+    if ([CLLocationManager respondsToSelector:@selector(locationServicesEnabled)]) {
+        if([CLLocationManager locationServicesEnabled])
+        {
+            [self.locationManager stopUpdatingLocation];
+        }
+    }
+    else if ([CLLocationManager instancesRespondToSelector:@selector(locationServicesEnabled)]){
+        
+        if ([self.locationManager performSelector:@selector(locationServicesEnabled)]) {
+            [self.locationManager stopUpdatingLocation];
+        }
+    }
+}
+
+- (void)uploadLocation2Server:(CLLocationCoordinate2D)coordinate{
+    isUpload = YES;
+    
+    NSString *uploadStr = kUpLoadLocation(coordinate.latitude, coordinate.longitude);
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:uploadStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        isUpload = NO;
+        
+        if (responseObject == nil || [[responseObject objectForKey:@"result"] intValue] == 0 ) {
+            // 操作错误
+            
+            return;
+        }
+        
+        NSDictionary *dataDic = [responseObject objectForKey:@"data"];
+        if ([[dataDic objectForKey:@"success"] isEqualToString:@"1"]) {
+
+        }
+
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        // 网络连接失败
+        isUpload = NO;
+    }];
+}
+
+- (void)requestAllLocation{
+    isDownload = YES;
+    
+    NSString *locationStr = kGetLocation;
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:locationStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        isDownload = NO;
+        
+        if (responseObject == nil || [[responseObject objectForKey:@"result"] intValue] == 0 ) {
+            // 操作错误
+            
+            return;
+        }
+        
+        NSArray *dataArray = [responseObject objectForKey:@"data"];
+        if (dataArray && [dataArray count] > 0) {
+            [self addPlayerAnnotation:dataArray];
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        // 网络连接失败
+        isDownload = NO;
+    }];
 }
 
 - (void)moveToLocation:(CLLocationCoordinate2D)coordinate{
-    MKCoordinateRegion region =
-    MKCoordinateRegionMakeWithDistance(coordinate, 10000, 10000);
-    region.span.latitudeDelta /= 3;
-    region.span.longitudeDelta /= 3;
-    [mapView setRegion:region animated:YES];
+    GPoint realLatLon = {coordinate.latitude, coordinate.longitude};
     
-    MKUserLocation *annotation = [[MKUserLocation alloc] init];
-    annotation.coordinate = coordinate;
+    GPoint fakeLatLon = [addShift realToFake:realLatLon];
     
-    [mapView addAnnotation:annotation];
+    CLLocationCoordinate2D fakeCoordinate = CLLocationCoordinate2DMake(fakeLatLon.lat, fakeLatLon.lon);
+
+    MKCoordinateRegion defaultRegion;
+	
+    defaultRegion.center.latitude = fakeLatLon.lat;
+    defaultRegion.center.longitude = fakeLatLon.lon;
     
-//    MKAnnotationView *annotationView = [[MKAnnotationView alloc] init];
-//    annotationView.
+    defaultRegion.span.latitudeDelta = kDefaultLatitudeDelta;
+    defaultRegion.span.longitudeDelta = kDefaultLatitudeDelta;
+    
+    [mapView setRegion:defaultRegion animated:YES];
+    
+    [mapView removeAnnotation:myLocation];
+    
+    self.myLocation = [[RUserLocation alloc] init];
+    myLocation.coordinate = fakeCoordinate;
+    myLocation.userInfo = @{@"invite_code": kCode};
+    
+    [mapView addAnnotation:myLocation];
+}
+
+- (void)addPlayerAnnotation:(NSArray *)playerArray{
+    for (NSDictionary *item in playerArray) {
+        if ([[item objectForKey:@"invite_code"] isEqualToString:kCode]) {
+            continue;
+        }else{
+            
+        }
+    }
+}
+
+- (void)removePlayerAnnotation {
+    NSMutableArray *delArray = [NSMutableArray array];
+    for (id annotation in [mapView annotations]) {
+        if ([annotation isKindOfClass:[MKUserLocation class]]) {
+            [delArray addObject:annotation];
+        }
+    }
+    [mapView removeAnnotations:delArray];
 }
 
 #pragma mark - CLLocationManagerDelegate
@@ -149,16 +290,33 @@
     DMLog(@"latitude:%f",newLocation.coordinate.latitude);
     DMLog(@"longitude:%f",newLocation.coordinate.longitude);
     
+    if (isUpload) {
+        return;
+    }
+    
+    [self uploadLocation2Server:newLocation.coordinate];
     [self moveToLocation:newLocation.coordinate];
 }
 
 #pragma mark - MKMapViewDelegate
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation{
+    /*
     MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"test"];
     annotationView.frame = CGRectMake(0, 0, 40, 40);
     annotationView.backgroundColor = [UIColor cyanColor];
+    */
     
-    return annotationView;
+    if (annotation == myLocation) {
+        MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"myLocation"];
+        annotationView.frame = CGRectMake(0, 0, 36, 48);
+        annotationView.backgroundColor = [UIColor clearColor];
+        NSString *code = [myLocation.userInfo objectForKey:@"invite_code"];
+        annotationView.image = [UIImage imageNamed:[self getAvatarName:code]];
+        annotationView.centerOffset = CGPointMake(0, -24);
+        return annotationView;
+    }
+    
+    return nil;
 }
 
 @end
