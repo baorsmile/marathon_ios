@@ -53,8 +53,6 @@
     locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
     locationManager.distanceFilter = 10;
     
-//    [self.locationManager startUpdatingLocation];
-    
     // Start heading updates.
     if ([CLLocationManager headingAvailable]) {
         locationManager.headingFilter = 1;
@@ -66,24 +64,24 @@
     [self.view addSubview:mapView];
     
     UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, VIEW_HEIGHT-34, 320, 34)];
-    bottomView.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.7];
+    bottomView.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.8];
     [self.view addSubview:bottomView];
     
     UIButton *reminderBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    reminderBtn.frame = CGRectMake(10, VIEW_HEIGHT - 50, 70, 40);
-    reminderBtn.backgroundColor = [UIColor blackColor];
+    reminderBtn.frame = CGRectMake(15, VIEW_HEIGHT-37-5, 45, 37);
+    [reminderBtn setBackgroundImage:[UIImage imageNamed:@"reminder"] forState:UIControlStateNormal];
     [reminderBtn addTarget:self action:@selector(reminder_click:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:reminderBtn];
     
     UIButton *friendsBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    friendsBtn.frame = CGRectMake(VIEW_WIDTH-70-10, VIEW_HEIGHT - 50, 70, 40);
-    friendsBtn.backgroundColor = [UIColor redColor];
+    friendsBtn.frame = CGRectMake(VIEW_WIDTH-49-15, VIEW_HEIGHT-37-5, 49, 37);
+    [friendsBtn setBackgroundImage:[UIImage imageNamed:@"friends"] forState:UIControlStateNormal];
     [friendsBtn addTarget:self action:@selector(friends_click:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:friendsBtn];
     
     UIButton *startBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    startBtn.frame = CGRectMake((VIEW_WIDTH-100)/2, VIEW_HEIGHT - 100 -10, 100, 100);
-    startBtn.backgroundColor = [UIColor blueColor];
+    startBtn.frame = CGRectMake((VIEW_WIDTH-60)/2, VIEW_HEIGHT-60-5, 60, 60);
+    [startBtn setBackgroundImage:[UIImage imageNamed:@"button"] forState:UIControlStateNormal];
     [startBtn addTarget:self action:@selector(start_click:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:startBtn];
 }
@@ -133,6 +131,7 @@
     return resultName;
 }
 
+#pragma mark - About Location Method
 - (void)startUpdateLocation
 {
     if ([CLLocationManager respondsToSelector:@selector(locationServicesEnabled)]) {
@@ -330,12 +329,6 @@
 
 #pragma mark - MKMapViewDelegate
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation{
-    /*
-    MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"test"];
-    annotationView.frame = CGRectMake(0, 0, 40, 40);
-    annotationView.backgroundColor = [UIColor cyanColor];
-    */
-    
     if (annotation == myLocation) {
         MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"myLocation"];
         annotationView.frame = CGRectMake(0, 0, 36, 48);
