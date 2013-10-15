@@ -83,6 +83,8 @@
             if (delegate && [delegate respondsToSelector:@selector(loginSuccess)]) {
                 [delegate loginSuccess];
             }
+            
+            [PersistenceHelper setData:code forKey:INVITECODE];
         }else{
             [MMProgressHUD dismissWithError:@"登录失败"];
         }
