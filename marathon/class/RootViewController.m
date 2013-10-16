@@ -129,7 +129,7 @@
 }
 
 - (void)friends_click:(id)sender{
-    [self stopUpdateLocation];
+    
 }
 
 - (void)start_click_down:(id)sender{

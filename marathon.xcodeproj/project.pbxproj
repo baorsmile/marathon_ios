@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		942202FA180E91DC002B7564 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942202F9180E91DC002B7564 /* FriendsViewController.m */; };
+		942202FD180E91F0002B7564 /* ReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942202FC180E91F0002B7564 /* ReminderViewController.m */; };
 		943FD94E180937BC00CDE52E /* MMHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 943FD93A180937BC00CDE52E /* MMHud.m */; };
 		943FD94F180937BC00CDE52E /* MMLinearProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 943FD93C180937BC00CDE52E /* MMLinearProgressView.m */; };
 		943FD950180937BC00CDE52E /* MMProgressHUD+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = 943FD93E180937BC00CDE52E /* MMProgressHUD+Animations.m */; };
@@ -107,6 +109,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		942202F8180E91DC002B7564 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
+		942202F9180E91DC002B7564 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		942202FB180E91F0002B7564 /* ReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderViewController.h; sourceTree = "<group>"; };
+		942202FC180E91F0002B7564 /* ReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderViewController.m; sourceTree = "<group>"; };
 		943FD939180937BC00CDE52E /* MMHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMHud.h; sourceTree = "<group>"; };
 		943FD93A180937BC00CDE52E /* MMHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMHud.m; sourceTree = "<group>"; };
 		943FD93B180937BC00CDE52E /* MMLinearProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLinearProgressView.h; sourceTree = "<group>"; };
@@ -406,6 +412,10 @@
 				945AD97D1807E1A200B09F43 /* RootViewController.m */,
 				944E0BB6180D37B200E0649B /* RUserLocation.h */,
 				944E0BB7180D37B200E0649B /* RUserLocation.m */,
+				942202F8180E91DC002B7564 /* FriendsViewController.h */,
+				942202F9180E91DC002B7564 /* FriendsViewController.m */,
+				942202FB180E91F0002B7564 /* ReminderViewController.h */,
+				942202FC180E91F0002B7564 /* ReminderViewController.m */,
 			);
 			path = class;
 			sourceTree = "<group>";
@@ -700,6 +710,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				942202FA180E91DC002B7564 /* FriendsViewController.m in Sources */,
 				945ADC9C1807F19800B09F43 /* AFURLConnectionOperation.m in Sources */,
 				945ADC971807F19800B09F43 /* AFHTTPRequestOperation.m in Sources */,
 				944E0BB5180CEC4C00E0649B /* Addshift.m in Sources */,
@@ -726,6 +737,7 @@
 				945ADCA01807F19800B09F43 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				945ADBC21807E99700B09F43 /* HJMOFileCache.m in Sources */,
 				945ADCAE1807F3F100B09F43 /* NSString+MD5Addition.m in Sources */,
+				942202FD180E91F0002B7564 /* ReminderViewController.m in Sources */,
 				945AD9551807E16700B09F43 /* main.m in Sources */,
 				945ADC9E1807F19800B09F43 /* AFURLResponseSerialization.m in Sources */,
 				945ADC6E1807EC3800B09F43 /* Utility.m in Sources */,
@@ -892,6 +904,7 @@
 					"/Users/RYan/项目/marathon/marathon/lib/Weixin",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5BB8EB9F-6E6F-434D-A847-B07C637D092E";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -916,6 +929,7 @@
 					"/Users/RYan/项目/marathon/marathon/lib/Weixin",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5BB8EB9F-6E6F-434D-A847-B07C637D092E";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
