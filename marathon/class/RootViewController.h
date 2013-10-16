@@ -13,6 +13,8 @@
 @interface RootViewController : UIViewController<MKMapViewDelegate, CLLocationManagerDelegate>{
     BOOL isUpload;
     BOOL isDownload;
+    
+    START_STATUS status;
 }
 
 @end

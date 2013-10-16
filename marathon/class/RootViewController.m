@@ -10,13 +10,18 @@
 #import "Addshift.h"
 #import "RUserLocation.h"
 
-@interface RootViewController ()
+@interface RootViewController (){
+    int seconds;
+}
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) MKMapView *mapView;
 @property (nonatomic, strong) AddShift *addShift;
 @property (nonatomic, strong) RUserLocation *myLocation;
 @property (nonatomic, strong) NSTimer *getLocationTimer;
+@property (nonatomic, strong) NSDate *downDate;
+@property (nonatomic, strong) UILabel *statusLabel;
+@property (nonatomic, strong) NSTimer *countTimer;
 
 @end
 
@@ -26,6 +31,9 @@
 @synthesize addShift;
 @synthesize myLocation;
 @synthesize getLocationTimer;
+@synthesize downDate;
+@synthesize statusLabel;
+@synthesize countTimer;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,6 +51,12 @@
     
     isUpload = NO;
     isDownload = NO;
+    status = kStartStatusStop;
+    seconds = 0;
+    
+    [[MMProgressHUD sharedHUD] setOverlayMode:MMProgressHUDWindowOverlayModeGradient];
+    [MMProgressHUD setDisplayStyle:MMProgressHUDDisplayStylePlain];
+    [MMProgressHUD setPresentationStyle:MMProgressHUDPresentationStyleExpand];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(requestLocation) name:kLoginSuccessNotification object:nil];
     
@@ -82,8 +96,17 @@
     UIButton *startBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     startBtn.frame = CGRectMake((VIEW_WIDTH-60)/2, VIEW_HEIGHT-60-5, 60, 60);
     [startBtn setBackgroundImage:[UIImage imageNamed:@"button"] forState:UIControlStateNormal];
-    [startBtn addTarget:self action:@selector(start_click:) forControlEvents:UIControlEventTouchUpInside];
+    [startBtn addTarget:self action:@selector(start_click_down:) forControlEvents:UIControlEventTouchDown];
+    [startBtn addTarget:self action:@selector(start_click_up:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:startBtn];
+    
+    self.statusLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
+    statusLabel.backgroundColor = [UIColor clearColor];
+    statusLabel.font = HEI_(16);
+    statusLabel.textAlignment = NSTextAlignmentCenter;
+    statusLabel.text = @"Start";
+    statusLabel.textColor = [UIColor whiteColor];
+    [startBtn addSubview:statusLabel];
 }
 
 - (void)didReceiveMemoryWarning
@@ -109,8 +132,35 @@
     [self stopUpdateLocation];
 }
 
-- (void)start_click:(id)sender{
-    [self startUpdateLocation];
+- (void)start_click_down:(id)sender{
+    self.downDate = [NSDate date];
+}
+
+- (void)start_click_up:(id)sender{
+    NSDate *nowDate = [NSDate date];
+    NSTimeInterval time = [nowDate timeIntervalSinceDate:downDate];
+    if (status == kStartStatusStop) {
+        [self startUpdateLocation];
+        [self startTimer];
+    }else if (status == kStartStatusStart){
+        if (time<1.5) {
+            //pause
+            [self stopUpdateLocation];
+            [self pauseTimer];
+        }else{
+            [self stopUpdateLocation];
+            [self stopTimer];
+        }
+    }else{
+        if (time<1.5) {
+            //start
+            [self startUpdateLocation];
+            [self startTimer];
+        }else{
+            [self stopUpdateLocation];
+            [self stopTimer];
+        }
+    }
 }
 
 - (NSString *)getAvatarName:(NSString *)code{
@@ -131,6 +181,44 @@
     return resultName;
 }
 
+- (void)showTime{
+    seconds++;
+    NSString *timeString=[NSString stringWithFormat:@"%02d:%02d",seconds/60,seconds%60];
+    statusLabel.text = timeString;
+}
+
+- (void)startTimer{
+    status = kStartStatusStart;
+
+    self.countTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(showTime) userInfo:nil repeats:YES];
+    [countTimer fire];
+
+    [MMProgressHUD showWithTitle:nil status:@"开始计时" image:[UIImage imageNamed:@"test"]];
+    [MMProgressHUD dismissAfterDelay:1.0];
+}
+
+- (void)pauseTimer{
+    status = kStartStatusPause;
+    
+    [countTimer invalidate];
+    self.countTimer = nil;
+    [MMProgressHUD showWithTitle:nil status:@"暂停计时" image:[UIImage imageNamed:@"test"]];
+    [MMProgressHUD dismissAfterDelay:1.0];
+}
+
+- (void)stopTimer{
+    status = kStartStatusStop;
+    seconds = 0;
+    
+    [countTimer invalidate];
+    self.countTimer = nil;
+    
+    [MMProgressHUD showWithTitle:nil status:@"停止计时" image:[UIImage imageNamed:@"test"]];
+    [MMProgressHUD dismissAfterDelay:1.0];
+    
+    statusLabel.text = @"Start";
+}
+
 #pragma mark - About Location Method
 - (void)startUpdateLocation
 {
@@ -140,8 +228,8 @@
         {
             [self.locationManager startUpdatingLocation];
             if (self.getLocationTimer == nil) {
-                [self performSelector:@selector(requestAllLocation) withObject:nil];
                 self.getLocationTimer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(requestAllLocation) userInfo:nil repeats:YES];
+                [getLocationTimer fire];
             }
         }
     }
@@ -150,8 +238,8 @@
         if ([self.locationManager performSelector:@selector(locationServicesEnabled)]) {
             [self.locationManager startUpdatingLocation];
             if (self.getLocationTimer == nil) {
-                [self performSelector:@selector(requestAllLocation) withObject:nil];
                 self.getLocationTimer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(requestAllLocation) userInfo:nil repeats:YES];
+                [getLocationTimer fire];
             }
         }
     }

@@ -133,6 +133,12 @@ typedef struct
 	double lon;
 } GPoint;
 
+typedef enum kStartStatus {
+    kStartStatusStop = 0,
+	kStartStatusStart,
+	kStartStatusPause
+} START_STATUS;
+
 typedef enum kUPLOAD_TYPE {
     kUploadNormal = 0,
 	kUploadTypeBlock,
