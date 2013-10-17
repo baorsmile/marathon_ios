@@ -34,6 +34,10 @@
     
     self.view.backgroundColor = BASE_PAGE_BG_COLOR;
     
+    UIImageView *backView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    backView.image = [UIImage imageNamed:@""];
+    [self.view addSubview:backView];
+    
     self.codeField = [[UITextField alloc] initWithFrame:CGRectMake(60, 40, 200, 40)];
     codeField.textAlignment = NSTextAlignmentCenter;
     codeField.borderStyle = UITextBorderStyleLine;
