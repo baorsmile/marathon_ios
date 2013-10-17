@@ -14,6 +14,9 @@
     BOOL isUpload;
     BOOL isDownload;
     
+    BOOL isLeft;
+    BOOL isRight;
+    
     START_STATUS status;
 }
 

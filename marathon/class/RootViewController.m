@@ -57,6 +57,8 @@
     
     isUpload = NO;
     isDownload = NO;
+    isLeft = NO;
+    isRight = NO;
     status = kStartStatusStop;
     seconds = 0;
     
@@ -129,15 +131,39 @@
 }
 
 - (void)reminder_click:(id)sender{
-    [UIView animateWithDuration:0.3 animations:^{
-        self.reminderVC.view.frame = CGRectMake(0, 0, 190, VIEW_HEIGHT-34);
-    }];
+    if (isLeft) {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.reminderVC.view.frame = CGRectMake(-190, 0, 190, VIEW_HEIGHT-34);
+        }];
+        isLeft = NO;
+    }else{
+        [UIView animateWithDuration:0.3 animations:^{
+            self.reminderVC.view.frame = CGRectMake(0, 0, 190, VIEW_HEIGHT-34);
+            self.friendsVC.view.frame = CGRectMake(320, 0, 190, VIEW_HEIGHT-34);
+        }];
+        isLeft = YES;
+        isRight = NO;
+    }
+
 }
 
 - (void)friends_click:(id)sender{
-    [UIView animateWithDuration:0.3 animations:^{
-        self.friendsVC.view.frame = CGRectMake(320-190, 0, 190, VIEW_HEIGHT-34);
-    }];
+    if (isRight) {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.friendsVC.view.frame = CGRectMake(320, 0, 190, VIEW_HEIGHT-34);
+        }];
+        isRight = NO;
+    }else{
+        [UIView animateWithDuration:0.3 animations:^{
+            self.friendsVC.view.frame = CGRectMake(320-190, 0, 190, VIEW_HEIGHT-34);
+            self.reminderVC.view.frame = CGRectMake(-190, 0, 190, VIEW_HEIGHT-34);
+        }];
+        isRight = YES;
+        isLeft = NO;
+    }
+    
+    
+    
 }
 
 - (void)start_click_down:(id)sender{
