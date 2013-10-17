@@ -18,6 +18,12 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    if (isIOS7) {
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+        self.window.clipsToBounds = YES;
+        self.window.frame = CGRectMake(0, 20, self.window.frame.size.width, self.window.frame.size.height-20);
+    }
+    
     self.rootVC = [[RootViewController alloc] init];
     self.window.rootViewController = rootVC;
     

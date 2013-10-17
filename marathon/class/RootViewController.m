@@ -9,6 +9,8 @@
 #import "RootViewController.h"
 #import "Addshift.h"
 #import "RUserLocation.h"
+#import "FriendsViewController.h"
+#import "ReminderViewController.h"
 
 @interface RootViewController (){
     int seconds;
@@ -23,6 +25,9 @@
 @property (nonatomic, strong) UILabel *statusLabel;
 @property (nonatomic, strong) NSTimer *countTimer;
 
+@property (nonatomic, strong) FriendsViewController *friendsVC;
+@property (nonatomic, strong) ReminderViewController *reminderVC;
+
 @end
 
 @implementation RootViewController
@@ -34,6 +39,7 @@
 @synthesize downDate;
 @synthesize statusLabel;
 @synthesize countTimer;
+@synthesize friendsVC,reminderVC;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -67,15 +73,17 @@
     locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
     locationManager.distanceFilter = 10;
     
-    // Start heading updates.
-    if ([CLLocationManager headingAvailable]) {
-        locationManager.headingFilter = 1;
-        [locationManager startUpdatingHeading];
-    }
-    
     self.mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
     mapView.delegate = self;
     [self.view addSubview:mapView];
+    
+    self.friendsVC = [[FriendsViewController alloc] init];
+    friendsVC.view.frame = CGRectMake(320, 0, 190, VIEW_HEIGHT-34);
+    [self.view addSubview:friendsVC.view];
+    
+    self.reminderVC = [[ReminderViewController alloc] init];
+    reminderVC.view.frame = CGRectMake(-190, 0, 190, VIEW_HEIGHT-34);
+    [self.view addSubview:reminderVC.view];
     
     UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, VIEW_HEIGHT-34, 320, 34)];
     bottomView.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.8];
@@ -121,15 +129,15 @@
 }
 
 - (void)reminder_click:(id)sender{
-    NSString *location = [PersistenceHelper dataForKey:@"location"];
-    DMLog(@"%@",location);
-    
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"CoreLocation Update Index" message:[NSString stringWithFormat:@"Number:%@",location] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-    [alertView show];
+    [UIView animateWithDuration:0.3 animations:^{
+        self.reminderVC.view.frame = CGRectMake(0, 0, 190, VIEW_HEIGHT-34);
+    }];
 }
 
 - (void)friends_click:(id)sender{
-    
+    [UIView animateWithDuration:0.3 animations:^{
+        self.friendsVC.view.frame = CGRectMake(320-190, 0, 190, VIEW_HEIGHT-34);
+    }];
 }
 
 - (void)start_click_down:(id)sender{
@@ -270,6 +278,10 @@
 }
 
 - (void)uploadLocation2Server:(CLLocationCoordinate2D)coordinate{
+    if (isUpload) {
+        return;
+    }
+    
     isUpload = YES;
     
     NSString *uploadStr = kUpLoadLocation(coordinate.latitude, coordinate.longitude);
@@ -391,28 +403,13 @@
 //#endif
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
-    
-    NSString *location = [PersistenceHelper dataForKey:@"location"];
-    int locationIndex;
-    if (location && [location length] > 0) {
-        locationIndex = [location integerValue];
-    }else{
-        locationIndex = 0;
-    }
-    
-    locationIndex++;
-    
-    [PersistenceHelper setData:[NSString stringWithFormat:@"%d",locationIndex] forKey:@"location"];
 
     DMLog(@"latitude:%f",newLocation.coordinate.latitude);
     DMLog(@"longitude:%f",newLocation.coordinate.longitude);
     
-    if (isUpload) {
-        return;
-    }
-    
     [self uploadLocation2Server:newLocation.coordinate];
     [self moveToLocation:newLocation.coordinate];
+
 }
 
 #pragma mark - MKMapViewDelegate

@@ -54,16 +54,6 @@
 		945AD97E1807E1A200B09F43 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD97D1807E1A200B09F43 /* RootViewController.m */; };
 		945AD9AC1807E4DD00B09F43 /* PersistenceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9A91807E4DD00B09F43 /* PersistenceHelper.m */; };
 		945AD9B31807E70100B09F43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 945AD9B21807E70100B09F43 /* Images.xcassets */; };
-		945ADBBC1807E99700B09F43 /* HJCircularBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9FC1807E99600B09F43 /* HJCircularBuffer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		945ADBBD1807E99700B09F43 /* HJManagedCropImageV.m in Sources */ = {isa = PBXBuildFile; fileRef = 945AD9FE1807E99600B09F43 /* HJManagedCropImageV.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		945ADBBF1807E99700B09F43 /* HJManagedImageV.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA021807E99600B09F43 /* HJManagedImageV.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		945ADBC11807E99700B09F43 /* HJMOBigFileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA071807E99600B09F43 /* HJMOBigFileCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		945ADBC21807E99700B09F43 /* HJMOFileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA091807E99600B09F43 /* HJMOFileCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		945ADBC31807E99700B09F43 /* HJMOHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA0B1807E99600B09F43 /* HJMOHandler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		945ADBC41807E99700B09F43 /* HJMOPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA0D1807E99600B09F43 /* HJMOPolicy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		945ADBC51807E99700B09F43 /* HJMOUserBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA101807E99600B09F43 /* HJMOUserBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		945ADBC61807E99700B09F43 /* HJObjManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA121807E99600B09F43 /* HJObjManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		945ADBC71807E99700B09F43 /* HJWeakMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA141807E99600B09F43 /* HJWeakMutableArray.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		945ADBF41807E99700B09F43 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA781807E99700B09F43 /* NSObject+SBJson.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		945ADBF51807E99700B09F43 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA7B1807E99700B09F43 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		945ADBF61807E99700B09F43 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADA7D1807E99700B09F43 /* SBJsonStreamParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -179,28 +169,6 @@
 		945AD9A81807E4DD00B09F43 /* PersistenceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistenceHelper.h; sourceTree = "<group>"; };
 		945AD9A91807E4DD00B09F43 /* PersistenceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistenceHelper.m; sourceTree = "<group>"; };
 		945AD9B21807E70100B09F43 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		945AD9FB1807E99600B09F43 /* HJCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCircularBuffer.h; sourceTree = "<group>"; };
-		945AD9FC1807E99600B09F43 /* HJCircularBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJCircularBuffer.m; sourceTree = "<group>"; };
-		945AD9FD1807E99600B09F43 /* HJManagedCropImageV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJManagedCropImageV.h; sourceTree = "<group>"; };
-		945AD9FE1807E99600B09F43 /* HJManagedCropImageV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJManagedCropImageV.m; sourceTree = "<group>"; };
-		945ADA011807E99600B09F43 /* HJManagedImageV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJManagedImageV.h; sourceTree = "<group>"; };
-		945ADA021807E99600B09F43 /* HJManagedImageV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJManagedImageV.m; sourceTree = "<group>"; };
-		945ADA031807E99600B09F43 /* HJManagedImageVDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJManagedImageVDelegate.h; sourceTree = "<group>"; };
-		945ADA061807E99600B09F43 /* HJMOBigFileCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJMOBigFileCache.h; sourceTree = "<group>"; };
-		945ADA071807E99600B09F43 /* HJMOBigFileCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJMOBigFileCache.m; sourceTree = "<group>"; };
-		945ADA081807E99600B09F43 /* HJMOFileCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJMOFileCache.h; sourceTree = "<group>"; };
-		945ADA091807E99600B09F43 /* HJMOFileCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJMOFileCache.m; sourceTree = "<group>"; };
-		945ADA0A1807E99600B09F43 /* HJMOHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJMOHandler.h; sourceTree = "<group>"; };
-		945ADA0B1807E99600B09F43 /* HJMOHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJMOHandler.m; sourceTree = "<group>"; };
-		945ADA0C1807E99600B09F43 /* HJMOPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJMOPolicy.h; sourceTree = "<group>"; };
-		945ADA0D1807E99600B09F43 /* HJMOPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJMOPolicy.m; sourceTree = "<group>"; };
-		945ADA0E1807E99600B09F43 /* HJMOUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJMOUser.h; sourceTree = "<group>"; };
-		945ADA0F1807E99600B09F43 /* HJMOUserBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJMOUserBase.h; sourceTree = "<group>"; };
-		945ADA101807E99600B09F43 /* HJMOUserBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJMOUserBase.m; sourceTree = "<group>"; };
-		945ADA111807E99600B09F43 /* HJObjManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJObjManager.h; sourceTree = "<group>"; };
-		945ADA121807E99600B09F43 /* HJObjManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJObjManager.m; sourceTree = "<group>"; };
-		945ADA131807E99600B09F43 /* HJWeakMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJWeakMutableArray.h; sourceTree = "<group>"; };
-		945ADA141807E99600B09F43 /* HJWeakMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJWeakMutableArray.m; sourceTree = "<group>"; };
 		945ADA761807E99700B09F43 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		945ADA771807E99700B09F43 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		945ADA781807E99700B09F43 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
@@ -481,41 +449,11 @@
 			isa = PBXGroup;
 			children = (
 				945ADC731807F19800B09F43 /* AFNetworking */,
-				945AD9FA1807E99600B09F43 /* HJCacheClasses */,
 				943FD938180937BC00CDE52E /* MMProgressHUD */,
 				945ADA751807E99700B09F43 /* SBJson */,
 				945ADC871807F19800B09F43 /* UIKit+AFNetworking */,
 			);
 			path = lib;
-			sourceTree = "<group>";
-		};
-		945AD9FA1807E99600B09F43 /* HJCacheClasses */ = {
-			isa = PBXGroup;
-			children = (
-				945AD9FB1807E99600B09F43 /* HJCircularBuffer.h */,
-				945AD9FC1807E99600B09F43 /* HJCircularBuffer.m */,
-				945AD9FD1807E99600B09F43 /* HJManagedCropImageV.h */,
-				945AD9FE1807E99600B09F43 /* HJManagedCropImageV.m */,
-				945ADA011807E99600B09F43 /* HJManagedImageV.h */,
-				945ADA021807E99600B09F43 /* HJManagedImageV.m */,
-				945ADA031807E99600B09F43 /* HJManagedImageVDelegate.h */,
-				945ADA061807E99600B09F43 /* HJMOBigFileCache.h */,
-				945ADA071807E99600B09F43 /* HJMOBigFileCache.m */,
-				945ADA081807E99600B09F43 /* HJMOFileCache.h */,
-				945ADA091807E99600B09F43 /* HJMOFileCache.m */,
-				945ADA0A1807E99600B09F43 /* HJMOHandler.h */,
-				945ADA0B1807E99600B09F43 /* HJMOHandler.m */,
-				945ADA0C1807E99600B09F43 /* HJMOPolicy.h */,
-				945ADA0D1807E99600B09F43 /* HJMOPolicy.m */,
-				945ADA0E1807E99600B09F43 /* HJMOUser.h */,
-				945ADA0F1807E99600B09F43 /* HJMOUserBase.h */,
-				945ADA101807E99600B09F43 /* HJMOUserBase.m */,
-				945ADA111807E99600B09F43 /* HJObjManager.h */,
-				945ADA121807E99600B09F43 /* HJObjManager.m */,
-				945ADA131807E99600B09F43 /* HJWeakMutableArray.h */,
-				945ADA141807E99600B09F43 /* HJWeakMutableArray.m */,
-			);
-			path = HJCacheClasses;
 			sourceTree = "<group>";
 		};
 		945ADA751807E99700B09F43 /* SBJson */ = {
@@ -717,17 +655,13 @@
 				945ADBFF1807E99700B09F43 /* SBJsonWriter.m in Sources */,
 				943FD94F180937BC00CDE52E /* MMLinearProgressView.m in Sources */,
 				945AD9AC1807E4DD00B09F43 /* PersistenceHelper.m in Sources */,
-				945ADBC71807E99700B09F43 /* HJWeakMutableArray.m in Sources */,
 				945ADBFD1807E99700B09F43 /* SBJsonTokeniser.m in Sources */,
-				945ADBBF1807E99700B09F43 /* HJManagedImageV.m in Sources */,
-				945ADBC61807E99700B09F43 /* HJObjManager.m in Sources */,
 				944E0BB8180D37B200E0649B /* RUserLocation.m in Sources */,
 				945ADBFE1807E99700B09F43 /* SBJsonUTF8Stream.m in Sources */,
 				943FD953180937BC00CDE52E /* MMProgressHUDOverlayView.m in Sources */,
 				945AD9591807E16700B09F43 /* AppDelegate.m in Sources */,
 				945ADC9A1807F19800B09F43 /* AFNetworkReachabilityManager.m in Sources */,
 				945ADC9B1807F19800B09F43 /* AFSecurityPolicy.m in Sources */,
-				945ADBC31807E99700B09F43 /* HJMOHandler.m in Sources */,
 				945ADBF71807E99700B09F43 /* SBJsonStreamParserAccumulator.m in Sources */,
 				945ADCA31807F19800B09F43 /* UIButton+AFNetworking.m in Sources */,
 				945ADBFA1807E99700B09F43 /* SBJsonStreamWriter.m in Sources */,
@@ -735,7 +669,6 @@
 				945ADCA51807F19800B09F43 /* UIProgressView+AFNetworking.m in Sources */,
 				943FD950180937BC00CDE52E /* MMProgressHUD+Animations.m in Sources */,
 				945ADCA01807F19800B09F43 /* AFNetworkActivityIndicatorManager.m in Sources */,
-				945ADBC21807E99700B09F43 /* HJMOFileCache.m in Sources */,
 				945ADCAE1807F3F100B09F43 /* NSString+MD5Addition.m in Sources */,
 				942202FD180E91F0002B7564 /* ReminderViewController.m in Sources */,
 				945AD9551807E16700B09F43 /* main.m in Sources */,
@@ -749,9 +682,7 @@
 				943FD951180937BC00CDE52E /* MMProgressHUD+Class.m in Sources */,
 				943FD957180937BC00CDE52E /* MMVectorImage.m in Sources */,
 				945ADC981807F19800B09F43 /* AFHTTPRequestOperationManager.m in Sources */,
-				945ADBC51807E99700B09F43 /* HJMOUserBase.m in Sources */,
 				945ADC9D1807F19800B09F43 /* AFURLRequestSerialization.m in Sources */,
-				945ADBC41807E99700B09F43 /* HJMOPolicy.m in Sources */,
 				945ADCAD1807F3F100B09F43 /* NSString+MD5.m in Sources */,
 				945ADCA61807F19800B09F43 /* UIWebView+AFNetworking.m in Sources */,
 				945ADBF61807E99700B09F43 /* SBJsonStreamParser.m in Sources */,
@@ -761,15 +692,12 @@
 				945ADC9F1807F19800B09F43 /* AFURLSessionManager.m in Sources */,
 				945ADC991807F19800B09F43 /* AFHTTPSessionManager.m in Sources */,
 				943FD955180937BC00CDE52E /* MMProgressHUDWindow.m in Sources */,
-				945ADBBD1807E99700B09F43 /* HJManagedCropImageV.m in Sources */,
 				945ADBF91807E99700B09F43 /* SBJsonStreamParserState.m in Sources */,
 				943FD956180937BC00CDE52E /* MMRadialProgressView.m in Sources */,
 				945ADCA21807F19800B09F43 /* UIAlertView+AFNetworking.m in Sources */,
 				945AD97B1807E19400B09F43 /* LoginViewController.m in Sources */,
-				945ADBBC1807E99700B09F43 /* HJCircularBuffer.m in Sources */,
 				945ADBFC1807E99700B09F43 /* SBJsonStreamWriterState.m in Sources */,
 				943FD94E180937BC00CDE52E /* MMHud.m in Sources */,
-				945ADBC11807E99700B09F43 /* HJMOBigFileCache.m in Sources */,
 				945ADCA11807F19800B09F43 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
