@@ -27,7 +27,6 @@
 // THE SOFTWARE.
 
 #import <UIKit/UIKit.h>
-#import "HJManagedImageV.h"
 #import <QuartzCore/QuartzCore.h>
 
 @protocol MBProgressHUDDelegate;
