@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		940420691810182D002A5A24 /* AppStore_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 940420601810182D002A5A24 /* AppStore_114.png */; };
+		9404206A1810182D002A5A24 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 940420611810182D002A5A24 /* Default-568h@2x.png */; };
+		9404206B1810182D002A5A24 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 940420621810182D002A5A24 /* Default.png */; };
+		9404206C1810182D002A5A24 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 940420631810182D002A5A24 /* Default@2x.png */; };
+		9404206D1810182D002A5A24 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 940420641810182D002A5A24 /* Icon-Small.png */; };
+		9404206E1810182D002A5A24 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 940420651810182D002A5A24 /* Icon-Small@2x.png */; };
+		9404206F1810182D002A5A24 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 940420661810182D002A5A24 /* icon.png */; };
+		940420701810182D002A5A24 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 940420671810182D002A5A24 /* icon@2x.png */; };
+		940420711810182D002A5A24 /* logo_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 940420681810182D002A5A24 /* logo_120.png */; };
 		942202FA180E91DC002B7564 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942202F9180E91DC002B7564 /* FriendsViewController.m */; };
 		942202FD180E91F0002B7564 /* ReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942202FC180E91F0002B7564 /* ReminderViewController.m */; };
 		943FD94E180937BC00CDE52E /* MMHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 943FD93A180937BC00CDE52E /* MMHud.m */; };
@@ -99,6 +108,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		940420601810182D002A5A24 /* AppStore_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppStore_114.png; sourceTree = "<group>"; };
+		940420611810182D002A5A24 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		940420621810182D002A5A24 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		940420631810182D002A5A24 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		940420641810182D002A5A24 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		940420651810182D002A5A24 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		940420661810182D002A5A24 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		940420671810182D002A5A24 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		940420681810182D002A5A24 /* logo_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_120.png; sourceTree = "<group>"; };
 		942202F8180E91DC002B7564 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
 		942202F9180E91DC002B7564 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
 		942202FB180E91F0002B7564 /* ReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderViewController.h; sourceTree = "<group>"; };
@@ -265,6 +283,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9404204D1810166F002A5A24 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				940420601810182D002A5A24 /* AppStore_114.png */,
+				940420611810182D002A5A24 /* Default-568h@2x.png */,
+				940420621810182D002A5A24 /* Default.png */,
+				940420631810182D002A5A24 /* Default@2x.png */,
+				940420641810182D002A5A24 /* Icon-Small.png */,
+				940420651810182D002A5A24 /* Icon-Small@2x.png */,
+				940420661810182D002A5A24 /* icon.png */,
+				940420671810182D002A5A24 /* icon@2x.png */,
+				940420681810182D002A5A24 /* logo_120.png */,
+			);
+			name = icon;
+			path = image/icon;
+			sourceTree = "<group>";
+		};
 		943FD938180937BC00CDE52E /* MMProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +370,7 @@
 				945AD9C01807E99600B09F43 /* lib */,
 				945AD97F1807E1EB00B09F43 /* const */,
 				945AD9781807E18500B09F43 /* image */,
+				9404204D1810166F002A5A24 /* icon */,
 				945AD94F1807E16600B09F43 /* Supporting Files */,
 			);
 			path = marathon;
@@ -616,6 +652,7 @@
 				944E0BA7180CE7D900E0649B /* AVATAS4@2x.png in Resources */,
 				944E0BA3180CE7D900E0649B /* AVATAS2@2x.png in Resources */,
 				944E0BAE180CE7D900E0649B /* reminder.png in Resources */,
+				9404206B1810182D002A5A24 /* Default.png in Resources */,
 				944E0BA2180CE7D900E0649B /* AVATAS2.png in Resources */,
 				944E0BA9180CE7D900E0649B /* AVATAS5@2x.png in Resources */,
 				944E0BA8180CE7D900E0649B /* AVATAS5.png in Resources */,
@@ -625,11 +662,19 @@
 				944E0BAC180CE7D900E0649B /* friends.png in Resources */,
 				944E0BA4180CE7D900E0649B /* AVATAS3.png in Resources */,
 				944E0BA6180CE7D900E0649B /* AVATAS4.png in Resources */,
+				940420711810182D002A5A24 /* logo_120.png in Resources */,
+				9404206A1810182D002A5A24 /* Default-568h@2x.png in Resources */,
+				940420701810182D002A5A24 /* icon@2x.png in Resources */,
 				945AD9B31807E70100B09F43 /* Images.xcassets in Resources */,
+				9404206C1810182D002A5A24 /* Default@2x.png in Resources */,
 				944E0BA5180CE7D900E0649B /* AVATAS3@2x.png in Resources */,
 				944E0BAA180CE7D900E0649B /* button.png in Resources */,
 				944E0BAB180CE7D900E0649B /* button@2x.png in Resources */,
 				944E0BA0180CE7D900E0649B /* AVATAS1.png in Resources */,
+				9404206F1810182D002A5A24 /* icon.png in Resources */,
+				9404206E1810182D002A5A24 /* Icon-Small@2x.png in Resources */,
+				940420691810182D002A5A24 /* AppStore_114.png in Resources */,
+				9404206D1810182D002A5A24 /* Icon-Small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
