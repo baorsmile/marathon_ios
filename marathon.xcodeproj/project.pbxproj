@@ -893,7 +893,7 @@
 					"/Users/RYan/项目/marathon/marathon/lib/Weixin",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5BB8EB9F-6E6F-434D-A847-B07C637D092E";
+				PROVISIONING_PROFILE = "639F36C9-DE7B-40A0-B73F-31E9A6A255E0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -918,7 +918,7 @@
 					"/Users/RYan/项目/marathon/marathon/lib/Weixin",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5BB8EB9F-6E6F-434D-A847-B07C637D092E";
+				PROVISIONING_PROFILE = "639F36C9-DE7B-40A0-B73F-31E9A6A255E0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

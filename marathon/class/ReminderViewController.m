@@ -49,6 +49,10 @@
     
     self.avPlayer = nil;
     
+    [[MMProgressHUD sharedHUD] setOverlayMode:MMProgressHUDWindowOverlayModeGradient];
+    [MMProgressHUD setDisplayStyle:MMProgressHUDDisplayStylePlain];
+    [MMProgressHUD setPresentationStyle:MMProgressHUDPresentationStyleExpand];
+    
     //drink
     UILabel *drinkLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 20, 160, 18)];
     drinkLabel.backgroundColor = [UIColor clearColor];

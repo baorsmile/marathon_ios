@@ -37,23 +37,26 @@
     UIImageView *backView = [[UIImageView alloc] initWithFrame:self.view.bounds];
     backView.contentMode = UIViewContentModeScaleAspectFill;
     backView.image = [UIImage imageNamed:@"login_bg"];
+    backView.userInteractionEnabled = YES;
     [self.view addSubview:backView];
     
-    UIImageView *passView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 160, 229, 75)];
+    UIImageView *passView = [[UIImageView alloc] initWithFrame:CGRectMake(45.5, 160, 229, 75)];
+    passView.userInteractionEnabled = YES;
     passView.image = [UIImage imageNamed:@"password"];
     [self.view addSubview:passView];
     
     self.codeField = [[UITextField alloc] initWithFrame:passView.bounds];
     codeField.backgroundColor = [UIColor clearColor];
     codeField.textAlignment = NSTextAlignmentCenter;
+    codeField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     codeField.textColor = [UIColor whiteColor];
     codeField.delegate = self;
-    codeField.font = HEI_(26);
+    codeField.font = HEI_(46);
     codeField.returnKeyType = UIReturnKeyDone;
-    [self.view addSubview:codeField];
+    [passView addSubview:codeField];
     
     UIButton *submitBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    submitBtn.frame = CGRectMake(264, 174, 46, 46);
+    submitBtn.frame = CGRectMake(269, 174, 46, 46);
     [submitBtn setBackgroundImage:[UIImage imageNamed:@"code"] forState:UIControlStateNormal];
     [submitBtn addTarget:self action:@selector(submit_click:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:submitBtn];
