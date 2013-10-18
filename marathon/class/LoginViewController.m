@@ -33,24 +33,28 @@
 	// Do any additional setup after loading the view.
     
     self.view.backgroundColor = BASE_PAGE_BG_COLOR;
-    
+
     UIImageView *backView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-    backView.image = [UIImage imageNamed:@""];
+    backView.contentMode = UIViewContentModeScaleAspectFill;
+    backView.image = [UIImage imageNamed:@"login_bg"];
     [self.view addSubview:backView];
     
-    self.codeField = [[UITextField alloc] initWithFrame:CGRectMake(60, 40, 200, 40)];
+    UIImageView *passView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 160, 229, 75)];
+    passView.image = [UIImage imageNamed:@"password"];
+    [self.view addSubview:passView];
+    
+    self.codeField = [[UITextField alloc] initWithFrame:passView.bounds];
+    codeField.backgroundColor = [UIColor clearColor];
     codeField.textAlignment = NSTextAlignmentCenter;
-    codeField.borderStyle = UITextBorderStyleLine;
+    codeField.textColor = [UIColor whiteColor];
     codeField.delegate = self;
     codeField.font = HEI_(26);
     codeField.returnKeyType = UIReturnKeyDone;
     [self.view addSubview:codeField];
     
     UIButton *submitBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    submitBtn.frame = CGRectMake(60, 100, 200, 40);
-    submitBtn.titleLabel.font = HEI_(16);
-    [submitBtn setTitle:@"提 交" forState:UIControlStateNormal];
-    [submitBtn setBackgroundColor:[UIColor grayColor]];
+    submitBtn.frame = CGRectMake(264, 174, 46, 46);
+    [submitBtn setBackgroundImage:[UIImage imageNamed:@"code"] forState:UIControlStateNormal];
     [submitBtn addTarget:self action:@selector(submit_click:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:submitBtn];
 }

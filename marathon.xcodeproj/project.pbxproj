@@ -95,6 +95,10 @@
 		945ADCAD1807F3F100B09F43 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADCA81807F3F100B09F43 /* NSString+MD5.m */; };
 		945ADCAE1807F3F100B09F43 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADCAA1807F3F100B09F43 /* NSString+MD5Addition.m */; };
 		945ADCAF1807F3F100B09F43 /* NSString+stringValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 945ADCAC1807F3F100B09F43 /* NSString+stringValue.m */; };
+		9477BE411810EAEA00C10AEC /* code.png in Resources */ = {isa = PBXBuildFile; fileRef = 9477BE3D1810EAE900C10AEC /* code.png */; };
+		9477BE421810EAEA00C10AEC /* code@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9477BE3E1810EAE900C10AEC /* code@2x.png */; };
+		9477BE431810EAEA00C10AEC /* login_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9477BE3F1810EAEA00C10AEC /* login_bg@2x.png */; };
+		9477BE441810EAEA00C10AEC /* password@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9477BE401810EAEA00C10AEC /* password@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -255,6 +259,10 @@
 		945ADCAA1807F3F100B09F43 /* NSString+MD5Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5Addition.m"; sourceTree = "<group>"; };
 		945ADCAB1807F3F100B09F43 /* NSString+stringValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+stringValue.h"; sourceTree = "<group>"; };
 		945ADCAC1807F3F100B09F43 /* NSString+stringValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+stringValue.m"; sourceTree = "<group>"; };
+		9477BE3D1810EAE900C10AEC /* code.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = code.png; sourceTree = "<group>"; };
+		9477BE3E1810EAE900C10AEC /* code@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "code@2x.png"; sourceTree = "<group>"; };
+		9477BE3F1810EAEA00C10AEC /* login_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_bg@2x.png"; sourceTree = "<group>"; };
+		9477BE401810EAEA00C10AEC /* password@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -427,6 +435,10 @@
 		945AD9781807E18500B09F43 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				9477BE3D1810EAE900C10AEC /* code.png */,
+				9477BE3E1810EAE900C10AEC /* code@2x.png */,
+				9477BE3F1810EAEA00C10AEC /* login_bg@2x.png */,
+				9477BE401810EAEA00C10AEC /* password@2x.png */,
 				944E0B90180CE7D900E0649B /* AVATAS1.png */,
 				944E0B91180CE7D900E0649B /* AVATAS1@2x.png */,
 				944E0B92180CE7D900E0649B /* AVATAS2.png */,
@@ -653,11 +665,14 @@
 				944E0BA3180CE7D900E0649B /* AVATAS2@2x.png in Resources */,
 				944E0BAE180CE7D900E0649B /* reminder.png in Resources */,
 				9404206B1810182D002A5A24 /* Default.png in Resources */,
+				9477BE441810EAEA00C10AEC /* password@2x.png in Resources */,
+				9477BE431810EAEA00C10AEC /* login_bg@2x.png in Resources */,
 				944E0BA2180CE7D900E0649B /* AVATAS2.png in Resources */,
 				944E0BA9180CE7D900E0649B /* AVATAS5@2x.png in Resources */,
 				944E0BA8180CE7D900E0649B /* AVATAS5.png in Resources */,
 				944E0BAD180CE7D900E0649B /* friends@2x.png in Resources */,
 				944E0BAF180CE7D900E0649B /* reminder@2x.png in Resources */,
+				9477BE411810EAEA00C10AEC /* code.png in Resources */,
 				945AD9531807E16700B09F43 /* InfoPlist.strings in Resources */,
 				944E0BAC180CE7D900E0649B /* friends.png in Resources */,
 				944E0BA4180CE7D900E0649B /* AVATAS3.png in Resources */,
@@ -670,6 +685,7 @@
 				944E0BA5180CE7D900E0649B /* AVATAS3@2x.png in Resources */,
 				944E0BAA180CE7D900E0649B /* button.png in Resources */,
 				944E0BAB180CE7D900E0649B /* button@2x.png in Resources */,
+				9477BE421810EAEA00C10AEC /* code@2x.png in Resources */,
 				944E0BA0180CE7D900E0649B /* AVATAS1.png in Resources */,
 				9404206F1810182D002A5A24 /* icon.png in Resources */,
 				9404206E1810182D002A5A24 /* Icon-Small@2x.png in Resources */,
