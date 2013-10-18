@@ -379,7 +379,9 @@
     
     [mapView setRegion:defaultRegion animated:YES];
     
-    [mapView removeAnnotation:myLocation];
+    if (myLocation) {
+        [mapView removeAnnotation:myLocation];
+    }
     
     self.myLocation = [[RUserLocation alloc] init];
     myLocation.coordinate = fakeCoordinate;

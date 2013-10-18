@@ -69,7 +69,7 @@
 #pragma mark - LoginViewControllerDelegate
 - (void)loginSuccess{
     [UIView animateWithDuration:0.5 animations:^{
-        self.loginVC.view.frame = CGRectMake(0, SCREEN_HEIGHT, self.loginVC.view.frame.size.width, self.loginVC.view.frame.size.height);
+        self.loginVC.view.frame = CGRectMake(0, SCREEN_HEIGHT*2, self.loginVC.view.frame.size.width, self.loginVC.view.frame.size.height);
     } completion:^(BOOL finished) {
         double delayInSeconds = 1.2;
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
