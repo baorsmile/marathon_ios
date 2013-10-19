@@ -71,7 +71,7 @@
 #pragma mark - Custom Method
 - (void)submit_click:(id)sender{
     NSString *code = codeField.text;
-    NSString *loginStr = kLoginURL(code);
+    NSString *loginStr = kLoginURL(code,kDeviceToken);
     
     [[MMProgressHUD sharedHUD] setOverlayMode:MMProgressHUDWindowOverlayModeGradient];
     [MMProgressHUD setDisplayStyle:MMProgressHUDDisplayStylePlain];

@@ -17,6 +17,7 @@
 @property (nonatomic, strong) LoginViewController *loginVC;
 
 @property (nonatomic, strong) NSString *code;
+@property (nonatomic, strong) NSString *gDeviceToken;
 
 
 @end

@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 
 @implementation AppDelegate
-@synthesize rootVC,loginVC,code;
+@synthesize rootVC,loginVC,code,gDeviceToken;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -34,6 +34,20 @@
         self.loginVC = [[LoginViewController alloc] init];
         loginVC.delegate = self;
         [self.window addSubview:loginVC.view];
+    }
+    
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound)];
+    
+    if (launchOptions) {
+        NSDictionary* pushNotificationKey = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+        if (pushNotificationKey) {
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"推送通知"
+                                                           message:@"这是通过推送窗口启动的程序，你可以在这里处理推送内容"
+                                                          delegate:nil
+                                                 cancelButtonTitle:@"知道了"
+                                                 otherButtonTitles:nil, nil];
+            [alert show];
+        }
     }
     
     return YES;
@@ -64,6 +78,39 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - 注册远程推送
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    NSString * tokenAsString = [[[deviceToken description]
+                                 stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]]
+                                stringByReplacingOccurrencesOfString:@" " withString:@""];
+    DMLog(@"token : %@", tokenAsString);
+    self.gDeviceToken = tokenAsString;
+//    // 记录本机设备token，允许服务器端发送通知
+//    self.gDeviceToken = tokenAsString;
+//    [PersistenceHelper setData:tokenAsString forKey:@"deviceToken"];
+//	NSString* sendString = UPLOAD_DEVICETOKEN(tokenAsString);
+//	[clientConnection get:sendString withID:kRequestDeviceToken];
+}
+
+// Provide a user explanation for when the registration fails
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    DMLog(@"!!!!!!!Error in registration. Error: %@", error);
+}
+
+#pragma mark - 程序收到远程推送消息 Remote notification
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+	DMLog(@"%@", userInfo);
+    
+	//接收到push  设置badge的值
+	NSString *badgeStr = [[userInfo objectForKey:@"aps"] objectForKey:@"badge"];
+	if (badgeStr != nil) {
+		[UIApplication sharedApplication].applicationIconBadgeNumber = [badgeStr intValue];
+	}
 }
 
 #pragma mark - LoginViewControllerDelegate

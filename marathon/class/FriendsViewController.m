@@ -43,23 +43,23 @@
     [self.view addSubview:friendsTableView];
     
     NSDictionary *dic1 = @{@"code":@"12",
-                          @"name":@"name1",
+                          @"name":@"God!",
                           @"image":@"AVATAS1"};
     
     NSDictionary *dic2 = @{@"code":@"123",
-                           @"name":@"name2",
+                           @"name":@"小鱼",
                            @"image":@"AVATAS2"};
     
     NSDictionary *dic3 = @{@"code":@"1234",
-                           @"name":@"name3",
+                           @"name":@"雨欣",
                            @"image":@"AVATAS3"};
     
     NSDictionary *dic4 = @{@"code":@"12345",
-                           @"name":@"name4",
+                           @"name":@"Lulu",
                            @"image":@"AVATAS4"};
     
     NSDictionary *dic5 = @{@"code":@"123456",
-                           @"name":@"name5",
+                           @"name":@"Ryan",
                            @"image":@"AVATAS5"};
     
     self.dataArray = [NSMutableArray arrayWithObjects:dic1,dic2,dic3,dic4,dic5,nil];

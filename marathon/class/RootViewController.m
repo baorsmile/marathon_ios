@@ -200,15 +200,15 @@
 - (NSString *)getAvatarName:(NSString *)code{
     NSString *resultName;
     
-    if ([code isEqualToString:@"123456"]) {
+    if ([code isEqualToString:@"12"]) {
         resultName = @"AVATAS1";
-    }else if ([code isEqualToString:@"12345"]){
+    }else if ([code isEqualToString:@"123"]){
         resultName = @"AVATAS2";
     }else if ([code isEqualToString:@"1234"]){
         resultName = @"AVATAS3";
-    }else if ([code isEqualToString:@"123"]){
+    }else if ([code isEqualToString:@"12345"]){
         resultName = @"AVATAS4";
-    }else if ([code isEqualToString:@"12"]){
+    }else if ([code isEqualToString:@"123456"]){
         resultName = @"AVATAS5";
     }
     

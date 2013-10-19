@@ -41,7 +41,7 @@
 
 //api url
 #ifdef DEBUG_LEHE
-    #define apiHost             @"http://192.168.3.22:8080/marathon/api_call.php?"   //For test Only
+    #define apiHost             @"http://192.168.1.102:8080/marathon/api_call.php?"   //For test Only
 #else
     #define apiHost             @"http://www.hkebuyer.com/marathon/api_call.php?"
 #endif
@@ -105,6 +105,9 @@
 #define kCode \
 [(AppDelegate *)[[UIApplication sharedApplication] delegate] code]
 
+#define kDeviceToken \
+[(AppDelegate *)[[UIApplication sharedApplication] delegate] gDeviceToken]
+
 #define kAppDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
 #pragma mark - 全局参数宏定义
@@ -154,8 +157,8 @@ typedef enum kUPLOAD_TYPE {
 
 
 #pragma mark - 拼接网络请求串
-#define kLoginURL(xx_code) \
-[NSString stringWithFormat:@"%@&m=login&code=%@",apiHost,xx_code]
+#define kLoginURL(xx_code,xx_token) \
+[NSString stringWithFormat:@"%@&m=login&code=%@&token=%@",apiHost,xx_code,xx_token]
 
 #define kUpLoadLocation(xx_lat,xx_lon) \
 [NSString stringWithFormat:@"%@&m=upload_location&code=%@&lat=%f&lon=%f",apiHost,kCode,xx_lat,xx_lon]
